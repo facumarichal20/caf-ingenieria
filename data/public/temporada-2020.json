@@ -1,0 +1,52 @@
+{
+  "anio": 2020,
+  "torneo": "Liga Interfacultades — Bienestar Universitario",
+  "fuente": "Placas de @ligainterfacultadesoficial (Instagram)",
+  "actualizado": "2026-11-07",
+  "equipo": "INGENIERIA",
+  "partidos": [
+    {
+      "competencia": "copa-plata",
+      "instancia": "final",
+      "fecha_nro": null,
+      "grupo": null,
+      "fecha": null,
+      "cancha": null,
+      "local": "INGENIERIA",
+      "visitante": "UDE",
+      "goles_local": 2,
+      "goles_visitante": 0,
+      "penales": null
+    }
+  ],
+  "tabla": [],
+  "resumen": "Campeón · Copa Plata",
+  "etapas": [
+    {
+      "etapa": "fase-regular",
+      "titulo": "Fase de grupos",
+      "detalle": "Torneo 2020 en dos grupos (A y B) por la pandemia; Ingeniería jugó en el grupo B"
+    },
+    {
+      "etapa": "playoffs",
+      "titulo": "Campeón · Copa Plata",
+      "detalle": "Final 2-0 a UDE en el Estadio Obdulio Varela"
+    }
+  ],
+  "campeones": [
+    {
+      "competencia": "copa-oro",
+      "equipo": "MEDICINA"
+    },
+    {
+      "competencia": "copa-plata",
+      "equipo": "INGENIERIA"
+    }
+  ],
+  "completitud": "parcial",
+  "notas": [
+    "Primer título del CAF en la Liga: Copa de Plata 2020, ganándole la final 2-0 a UDE en el Estadio Obdulio Varela (Villa Española).",
+    "En cuartos y semifinales de la Plata pasó junto a FADU, Administración y UDE; faltan esos resultados.",
+    "Medicina ganó la Copa Oro 2020 (su tercer título) ante Química."
+  ]
+}

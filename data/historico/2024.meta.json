@@ -1,0 +1,37 @@
+{
+  "fuente": "Placas de @ligainterfacultadesoficial (Instagram)",
+  "resumen": "Semifinal · Copa Oro",
+  "completitud": "parcial",
+  "etapas": [
+    { "etapa": "fase-regular", "titulo": "7.º de 15", "detalle": "22 pts · 6G 4E 4P · dif. -2" },
+    { "etapa": "mundial", "titulo": "Subcampeón del Mundialito", "detalle": "3 series ganadas por penales; final 0-1 con ISEF" },
+    { "etapa": "playoffs", "titulo": "Semifinal · Copa Oro", "detalle": "Le ganó a EMA (global 3-1); eliminado por ISEF (global 1-2)" }
+  ],
+  "tabla": [
+    { "pos": 1, "equipo": "CONTADORES", "pj": 14, "g": 12, "e": 0, "p": 2, "gf": null, "gc": null, "dif": 23, "pts": 36 },
+    { "pos": 2, "equipo": "EMA", "pj": 14, "g": 9, "e": 2, "p": 3, "gf": null, "gc": null, "dif": 24, "pts": 29 },
+    { "pos": 3, "equipo": "ISEF", "pj": 14, "g": 8, "e": 4, "p": 2, "gf": null, "gc": null, "dif": 14, "pts": 28 },
+    { "pos": 4, "equipo": "MEDICINA", "pj": 14, "g": 7, "e": 5, "p": 2, "gf": null, "gc": null, "dif": 34, "pts": 26 },
+    { "pos": 5, "equipo": "PSICOLOGIA", "pj": 14, "g": 8, "e": 1, "p": 5, "gf": null, "gc": null, "dif": 8, "pts": 25 },
+    { "pos": 6, "equipo": "NUTRICION", "pj": 14, "g": 7, "e": 3, "p": 4, "gf": null, "gc": null, "dif": 13, "pts": 24 },
+    { "pos": 7, "equipo": "INGENIERIA", "pj": 14, "g": 6, "e": 4, "p": 4, "gf": null, "gc": null, "dif": -2, "pts": 22 },
+    { "pos": 8, "equipo": "FIC", "pj": 14, "g": 5, "e": 4, "p": 5, "gf": null, "gc": null, "dif": -1, "pts": 19 },
+    { "pos": 9, "equipo": "SOCIALES", "pj": 14, "g": 5, "e": 3, "p": 6, "gf": null, "gc": null, "dif": -5, "pts": 18 },
+    { "pos": 10, "equipo": "DERECHO", "pj": 14, "g": 5, "e": 3, "p": 6, "gf": null, "gc": null, "dif": -8, "pts": 18 },
+    { "pos": 11, "equipo": "IPA", "pj": 14, "g": 4, "e": 4, "p": 6, "gf": null, "gc": null, "dif": -5, "pts": 16 },
+    { "pos": 12, "equipo": "ECONOMISTAS", "pj": 14, "g": 3, "e": 3, "p": 8, "gf": null, "gc": null, "dif": -11, "pts": 12 },
+    { "pos": 13, "equipo": "CIENCIAS", "pj": 14, "g": 3, "e": 1, "p": 10, "gf": null, "gc": null, "dif": -24, "pts": 10 },
+    { "pos": 14, "equipo": "ODON / ADMIN", "pj": 14, "g": 2, "e": 2, "p": 10, "gf": null, "gc": null, "dif": -32, "pts": 8 },
+    { "pos": 15, "equipo": "QUIMICA", "pj": 14, "g": 2, "e": 0, "p": 12, "gf": null, "gc": null, "dif": -27, "pts": 6 }
+  ],
+  "campeones": [
+    { "competencia": "mundial-oro", "equipo": "ISEF" },
+    { "competencia": "copa-oro", "equipo": "MEDICINA" },
+    { "competencia": "copa-plata", "equipo": "IPA" }
+  ],
+  "notas": [
+    "El Mundialito 2024 fue a eliminación directa desde octavos. Ingeniería pasó tres series por penales (Sociales 6-5, Contadores 5-4, Psicología 3-2) y perdió la final 0-1 con ISEF.",
+    "La tabla anual publicada no incluye goles a favor y en contra, solo la diferencia.",
+    "Falta cargar los resultados partido a partido de la fase regular."
+  ]
+}

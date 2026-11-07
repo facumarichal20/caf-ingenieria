@@ -1,4 +1,4 @@
-import type { Partido, Temporada } from "./tipos";
+import type { Competencia, FilaTabla, Partido, Temporada } from "./tipos";
 
 export type Resultado = "G" | "E" | "P";
 
@@ -25,10 +25,30 @@ export function partidosDe(t: Pick<Temporada, "partidos">, equipo: string): Part
     .sort((a, b) => orden(a.partido) - orden(b.partido));
 }
 
-const FASES = { regular: 0, cuartos: 1, semifinal: 2, final: 3 } as const;
+const ORDEN_COMP: Record<Competencia, number> = {
+  "fase-regular": 0, "mundial-eliminatoria": 1, "mundial-oro": 2, "mundial-plata": 2, "copa-oro": 3, "copa-plata": 3,
+};
+const ORDEN_INST = { fecha: 0, eliminatoria: 0, grupo: 1, octavos: 2, cuartos: 3, semifinal: 4, final: 5 } as const;
 function orden(p: Partido): number {
-  // la última fecha de la fase regular puede venir sin día: se ordena por fase y nro de fecha
-  return FASES[p.fase] * 1000 + (p.fecha_nro ?? 0);
+  // algunas fechas vienen sin día: se ordena por etapa, instancia y nro de fecha
+  return ORDEN_COMP[p.competencia] * 10000 + ORDEN_INST[p.instancia] * 100 + (p.fecha_nro ?? 0);
+}
+
+/** Tabla de posiciones calculada a partir de partidos (para series del Mundialito). */
+export function tablaDe(ps: Partido[]): FilaTabla[] {
+  const m = new Map<string, FilaTabla>();
+  const fila = (e: string) => m.get(e) ?? m.set(e, { pos: 0, equipo: e, pj: 0, g: 0, e: 0, p: 0, gf: 0, gc: 0, dif: 0, pts: 0 }).get(e)!;
+  for (const p of ps) {
+    const a = fila(p.local), b = fila(p.visitante);
+    if (p.goles_local === null || p.goles_visitante === null) continue;
+    for (const [x, gf, gc] of [[a, p.goles_local, p.goles_visitante], [b, p.goles_visitante, p.goles_local]] as const) {
+      x.pj++; x.gf = (x.gf ?? 0) + gf; x.gc = (x.gc ?? 0) + gc; x.dif = x.gf - x.gc;
+      if (gf > gc) { x.g++; x.pts += 3; } else if (gf === gc) { x.e++; x.pts += 1; } else x.p++;
+    }
+  }
+  return [...m.values()]
+    .sort((x, y) => y.pts - x.pts || y.dif - x.dif || (y.gf ?? 0) - (x.gf ?? 0) || x.equipo.localeCompare(y.equipo))
+    .map((f, i) => ({ ...f, pos: i + 1 }));
 }
 
 export interface Resumen {
@@ -88,5 +108,7 @@ const NOMBRES: Record<string, string> = {
   INGENIERIA: "Ingeniería", PSICOLOGIA: "Psicología", QUIMICA: "Química", NUTRICION: "Nutrición",
   ODONTOLOGIA: "Odontología", ECONOMISTAS: "Economistas", CONTADORES: "Contadores", MEDICINA: "Medicina",
   SOCIALES: "Sociales", DERECHO: "Derecho", CIENCIAS: "Ciencias", ISEF: "ISEF", IPA: "IPA", EMA: "EMA", FIC: "FIC",
+  ADMINISTRACION: "Administración", AGRONOMIA: "Agronomía", CLINICAS: "Dep. Clínicas", UDE: "UDE", FADU: "FADU",
+  "ODON / ADMIN": "Odonto. / Admin.",
 };
 export const nombreEquipo = (s: string) => NOMBRES[s] ?? s.charAt(0) + s.slice(1).toLowerCase();

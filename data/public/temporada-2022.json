@@ -1,0 +1,91 @@
+{
+  "anio": 2022,
+  "torneo": "Liga Interfacultades — Bienestar Universitario",
+  "fuente": "Epígrafes de @ingenieriafutbol_11 (Instagram) y notas de Bienestar Universitario",
+  "actualizado": "2026-11-07",
+  "equipo": "INGENIERIA",
+  "partidos": [
+    {
+      "competencia": "fase-regular",
+      "instancia": "fecha",
+      "fecha_nro": null,
+      "grupo": null,
+      "fecha": null,
+      "cancha": null,
+      "local": "INGENIERIA",
+      "visitante": "ISEF",
+      "goles_local": 1,
+      "goles_visitante": 0,
+      "penales": null
+    },
+    {
+      "competencia": "fase-regular",
+      "instancia": "fecha",
+      "fecha_nro": 5,
+      "grupo": null,
+      "fecha": null,
+      "cancha": null,
+      "local": "INGENIERIA",
+      "visitante": "ADMINISTRACION",
+      "goles_local": 1,
+      "goles_visitante": 0,
+      "penales": null
+    },
+    {
+      "competencia": "fase-regular",
+      "instancia": "fecha",
+      "fecha_nro": null,
+      "grupo": null,
+      "fecha": null,
+      "cancha": null,
+      "local": "INGENIERIA",
+      "visitante": "FIC",
+      "goles_local": 3,
+      "goles_visitante": 2,
+      "penales": null
+    },
+    {
+      "competencia": "fase-regular",
+      "instancia": "fecha",
+      "fecha_nro": 14,
+      "grupo": null,
+      "fecha": null,
+      "cancha": null,
+      "local": "INGENIERIA",
+      "visitante": "DERECHO",
+      "goles_local": 2,
+      "goles_visitante": 0,
+      "penales": null
+    }
+  ],
+  "tabla": [],
+  "resumen": "Clasificó a la Copa Oro",
+  "etapas": [
+    {
+      "etapa": "fase-regular",
+      "titulo": "Top 8",
+      "detalle": "Clasificó a la Copa Oro con un 2-0 a Derecho en la fecha 14"
+    },
+    {
+      "etapa": "playoffs",
+      "titulo": "Copa Oro",
+      "detalle": "Resultado sin cargar"
+    }
+  ],
+  "campeones": [
+    {
+      "competencia": "copa-oro",
+      "equipo": "MEDICINA"
+    },
+    {
+      "competencia": "copa-plata",
+      "equipo": "QUIMICA"
+    }
+  ],
+  "completitud": "parcial",
+  "notas": [
+    "2022 es el año en que asumió Carlos Díaz como DT y se consolidó el plantel actual.",
+    "La cuenta de la Liga no publicó la temporada 2022; los resultados salen de las publicaciones del CAF. Falta la tabla final y los playoffs.",
+    "Química ganó la Copa Plata 2022 ante FIC; Medicina fue campeón del Interfacultades."
+  ]
+}

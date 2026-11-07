@@ -1,0 +1,38 @@
+{
+  "fuente": "Placas de @ligainterfacultadesoficial (Instagram) y nota de Bienestar Universitario del 15/05/2023",
+  "resumen": "Cuartos de final · Copa Oro",
+  "completitud": "parcial",
+  "etapas": [
+    { "etapa": "fase-regular", "titulo": "5.º de 17", "detalle": "30 pts · 9G 3E 4P · 25-15" },
+    { "etapa": "playoffs", "titulo": "Cuartos de final · Copa Oro", "detalle": "Eliminado por Derecho por penales (1-1, 1-1; pen. 2-4)" }
+  ],
+  "tabla": [
+    { "pos": 1, "equipo": "MEDICINA", "pj": 16, "g": 13, "e": 2, "p": 1, "gf": 43, "gc": 13, "dif": 30, "pts": 41 },
+    { "pos": 2, "equipo": "EMA", "pj": 16, "g": 13, "e": 2, "p": 1, "gf": 38, "gc": 12, "dif": 25, "pts": 41 },
+    { "pos": 3, "equipo": "ISEF", "pj": 16, "g": 10, "e": 4, "p": 2, "gf": 38, "gc": 15, "dif": 23, "pts": 34 },
+    { "pos": 4, "equipo": "DERECHO", "pj": 16, "g": 11, "e": 0, "p": 5, "gf": 30, "gc": 22, "dif": 8, "pts": 33 },
+    { "pos": 5, "equipo": "INGENIERIA", "pj": 16, "g": 9, "e": 3, "p": 4, "gf": 25, "gc": 15, "dif": 10, "pts": 30 },
+    { "pos": 6, "equipo": "PSICOLOGIA", "pj": 16, "g": 8, "e": 5, "p": 3, "gf": 32, "gc": 20, "dif": 12, "pts": 29 },
+    { "pos": 7, "equipo": "CIENCIAS", "pj": 16, "g": 8, "e": 3, "p": 5, "gf": 37, "gc": 21, "dif": 16, "pts": 27 },
+    { "pos": 8, "equipo": "NUTRICION", "pj": 16, "g": 8, "e": 1, "p": 7, "gf": 36, "gc": 26, "dif": 10, "pts": 25 },
+    { "pos": 9, "equipo": "CONTADORES", "pj": 16, "g": 7, "e": 4, "p": 5, "gf": 25, "gc": 17, "dif": 8, "pts": 25 },
+    { "pos": 10, "equipo": "FIC", "pj": 16, "g": 7, "e": 3, "p": 6, "gf": 30, "gc": 30, "dif": 0, "pts": 24 },
+    { "pos": 11, "equipo": "IPA", "pj": 16, "g": 5, "e": 3, "p": 8, "gf": 29, "gc": 33, "dif": 4, "pts": 18 },
+    { "pos": 12, "equipo": "SOCIALES", "pj": 16, "g": 6, "e": 0, "p": 10, "gf": 23, "gc": 29, "dif": -6, "pts": 18 },
+    { "pos": 13, "equipo": "ADMINISTRACION", "pj": 16, "g": 5, "e": 1, "p": 10, "gf": 25, "gc": 28, "dif": -3, "pts": 16 },
+    { "pos": 14, "equipo": "AGRONOMIA", "pj": 16, "g": 5, "e": 0, "p": 11, "gf": 14, "gc": 32, "dif": -18, "pts": 15 },
+    { "pos": 15, "equipo": "CLINICAS", "pj": 16, "g": 3, "e": 0, "p": 13, "gf": 21, "gc": 47, "dif": -24, "pts": 9 },
+    { "pos": 16, "equipo": "QUIMICA", "pj": 16, "g": 2, "e": 2, "p": 12, "gf": 11, "gc": 45, "dif": -37, "pts": 7 },
+    { "pos": 17, "equipo": "UDE", "pj": 16, "g": 0, "e": 2, "p": 14, "gf": 7, "gc": 60, "dif": -53, "pts": 0 }
+  ],
+  "campeones": [
+    { "competencia": "copa-oro", "equipo": "MEDICINA" },
+    { "competencia": "copa-plata", "equipo": "CONTADORES" }
+  ],
+  "notas": [
+    "Mejor fase regular de estos años: 5.º de 17, con la tercera mejor defensa junto a ISEF (15 goles en contra en 16 partidos).",
+    "2023 no tuvo Mundialito: el formato fue fase regular de 17 fechas y playoffs.",
+    "Medicina le ganó la final de la Copa Oro a ISEF; Contadores la de Plata a FIC.",
+    "Falta cargar los resultados partido a partido de la fase regular."
+  ]
+}

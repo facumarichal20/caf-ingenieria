@@ -38,6 +38,11 @@ npm run build
   ```bash
   npm run import:liga -- "data/private/2026 - Interfacultades.xlsm" 2026
   ```
+- Temporadas anteriores (sin planilla oficial): se tipean en `data/historico/AAAA.csv`, un partido de Ingeniería por fila (copiá `PLANTILLA.csv`), y posiciones/campeones/notas en `AAAA.meta.json`. Después:
+  ```bash
+  npm run cargar:temporada -- 2025
+  ```
+  Cada temporada tiene tres etapas: **Fase regular**, **Mundialito** (eliminatoria + Mundial Oro/Plata) y **Playoffs** (Copa Oro/Plata).
 - `data/private/`: **nunca se sube** (está en `.gitignore`). Ahí van la planilla original y los fichados con vencimiento de carné. El importador guarda la cédula solo como hash y los últimos 3 dígitos.
 - Si no tenés la carpeta `data/private/`, la sección de dirigencia muestra datos de ejemplo inventados. Así cualquiera puede colaborar sin ver datos personales.
 

@@ -1,9 +1,21 @@
+import t2020 from "../../data/public/temporada-2020.json";
+import t2021 from "../../data/public/temporada-2021.json";
+import t2022 from "../../data/public/temporada-2022.json";
+import t2023 from "../../data/public/temporada-2023.json";
+import t2024 from "../../data/public/temporada-2024.json";
+import t2025 from "../../data/public/temporada-2025.json";
 import t2026 from "../../data/public/temporada-2026.json";
 import type { Temporada } from "./tipos";
 
 // Cuando estén cargadas en Supabase, esto pasa a leer de la base.
-// Por ahora las temporadas viven en data/public/*.json (generadas por `npm run import:liga`).
+// 2026 sale de la planilla oficial (`npm run import:liga`); los años anteriores, de data/historico (`npm run cargar:temporada`).
 export const TEMPORADAS: Record<number, Temporada> = {
+  2020: t2020 as Temporada,
+  2021: t2021 as Temporada,
+  2022: t2022 as Temporada,
+  2023: t2023 as Temporada,
+  2024: t2024 as Temporada,
+  2025: t2025 as Temporada,
   2026: t2026 as Temporada,
 };
 

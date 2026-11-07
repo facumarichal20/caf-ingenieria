@@ -1,0 +1,7 @@
+# Copiá este archivo como AAAA.csv (ej. 2025.csv) y cargá un partido de Ingeniería por fila.
+# Las líneas que empiezan con # se ignoran. Ver scripts/cargar-temporada.ts para el detalle de cada columna.
+competencia,instancia,nro,grupo,fecha,rival,gf,gc,penales,fuente
+fase-regular,fecha,1,,2025-03-22,MEDICINA,2,1,,https://www.instagram.com/p/...
+mundial-oro,grupo,1,Serie A,2025-08-23,CONTADORES,0,0,,
+copa-oro,cuartos,1,,2025-10-04,QUIMICA,1,1,,
+copa-oro,cuartos,2,,2025-10-11,QUIMICA,0,0,4-3,

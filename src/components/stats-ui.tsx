@@ -1,6 +1,6 @@
 import clsx from "clsx";
 import { nombreEquipo, type PartidoEquipo } from "@/lib/stats";
-import type { FilaTabla } from "@/lib/tipos";
+import type { FilaTabla, Partido } from "@/lib/tipos";
 
 export function StatTile({ label, value, sub, destacado }: { label: string; value: React.ReactNode; sub?: React.ReactNode; destacado?: boolean }) {
   return (
@@ -13,7 +13,16 @@ export function StatTile({ label, value, sub, destacado }: { label: string; valu
 }
 
 const COLOR = { G: "bg-win text-tinta", E: "bg-draw text-tinta", P: "bg-loss text-tinta" } as const;
-const FASE = { regular: "F", cuartos: "4tos", semifinal: "Semi", final: "Final" } as const;
+const RONDA = { octavos: "8vos", cuartos: "4tos", semifinal: "Semi", final: "Final" } as const;
+
+/** Etiqueta corta: "F3", "Elim", "MO·A1", "CO 4tos ida" */
+export function etiquetaCorta(p: Partido): string {
+  if (p.instancia === "fecha") return p.fecha_nro ? `F${p.fecha_nro}` : "FR";
+  if (p.instancia === "eliminatoria") return "Elim";
+  if (p.instancia === "grupo") return `${p.competencia === "mundial-oro" ? "MO" : "MP"}·${(p.grupo ?? "").replace("Serie ", "")}${p.fecha_nro ?? ""}`;
+  const copa = { "copa-oro": "CO", "copa-plata": "CP", "mundial-oro": "MO", "mundial-plata": "MP", "mundial-eliminatoria": "M", "fase-regular": "" }[p.competencia];
+  return `${copa} ${RONDA[p.instancia]}${p.fecha_nro ? (p.fecha_nro === 1 ? " ida" : " vta") : ""}`;
+}
 
 /** Tira de partidos tipo "forma reciente", uno por partido. */
 export function FormaStrip({ partidos }: { partidos: PartidoEquipo[] }) {
@@ -23,9 +32,7 @@ export function FormaStrip({ partidos }: { partidos: PartidoEquipo[] }) {
         <li key={i} className="overflow-hidden rounded-lg border border-line bg-surface">
           <div className={clsx("num flex items-center justify-between px-2 py-1 text-xs font-semibold", COLOR[x.resultado])}>
             <span>{x.resultado}</span>
-            <span>
-              {x.partido.fase === "regular" ? `${FASE.regular}${x.partido.fecha_nro}` : `${FASE[x.partido.fase]} ${x.partido.fecha_nro === 1 ? "ida" : "vta"}`}
-            </span>
+            <span>{etiquetaCorta(x.partido)}</span>
           </div>
           <div className="px-2 py-1.5">
             <div className="num text-xl font-semibold leading-none">
@@ -71,7 +78,7 @@ export function TablaPosiciones({ filas, resaltar, compacta }: { filas: FilaTabl
               <td className="px-2 py-2 text-right">{f.e}</td>
               <td className="px-2 py-2 text-right">{f.p}</td>
               <td className="px-2 py-2 text-right">
-                {f.gf}:{f.gc}
+                {f.gf === null ? "—" : `${f.gf}:${f.gc}`}
               </td>
               {!compacta && <td className="px-2 py-2 text-right">{f.dif > 0 ? `+${f.dif}` : f.dif}</td>}
               <td className="px-3 py-2 text-right">{f.pts}</td>

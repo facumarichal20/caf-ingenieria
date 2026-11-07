@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { CuentaRegresiva } from "@/components/cuenta-regresiva";
+import { LineaDeTiempo, Palmares } from "@/components/historia";
 import { FormaStrip, Seccion, StatTile, TablaPosiciones } from "@/components/stats-ui";
 import { caraACara, nombreEquipo, partidosDe, resumen } from "@/lib/stats";
 import { INICIO_2027, NOTAS, TEMPORADAS } from "@/lib/temporadas";
@@ -11,6 +12,8 @@ export default function Inicio() {
   const r = resumen(todos);
   const oficial = t.tabla.find((f) => f.equipo === t.equipo)!;
   const h2h = caraACara(todos);
+  const mundial = t.etapas.find((e) => e.etapa === "mundial");
+  const playoffs = t.etapas.find((e) => e.etapa === "playoffs");
   const pendientes = h2h.filter((x) => x.g === 0);
 
   return (
@@ -46,16 +49,32 @@ export default function Inicio() {
       <Seccion kicker="Temporada 2026" titulo="El año en números" accion={<Link className="text-sm text-accent hover:underline" href="/temporada/2026">Ver todo →</Link>}>
         <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-6">
           <StatTile destacado label="Fase regular" value={`${oficial.pos}°`} sub={`de ${t.tabla.length} · ${oficial.pts} pts`} />
-          <StatTile label="Copa Oro" value="4tos" sub="vs Medicina (1-0 / 0-2)" />
+          <StatTile label="Mundialito" value={mundial ? mundial.titulo.split(" · ")[0].replace(".º", "°") : "—"} sub={mundial ? `${mundial.titulo.split(" · ")[1]} · ${mundial.detalle}` : undefined} />
+          <StatTile label="Playoffs" value="4tos" sub={playoffs?.detalle?.replace("MEDICINA", "Medicina")} />
           <StatTile label="Partidos" value={r.pj} sub={`${r.g}G ${r.e}E ${r.p}P`} />
           <StatTile label="Goles" value={`${r.gf}–${r.gc}`} sub="a favor – en contra" />
           <StatTile label="Efectividad" value={`${r.efectividad}%`} sub="de los puntos en juego" />
-          <StatTile label="Vallas invictas" value={r.vallasInvictas} sub={`mejor racha: ${r.mejorRacha} sin perder`} />
         </div>
+        <p className="mt-3 text-sm text-dim">
+          {r.vallasInvictas} vallas invictas · mejor racha: {r.mejorRacha} partidos sin perder
+        </p>
         <div className="regla mt-6" aria-hidden />
-        <h3 className="mb-3 mt-6 text-sm uppercase tracking-wider text-dim">Partido a partido</h3>
+        <h3 className="mb-3 mt-6 text-sm uppercase tracking-wider text-dim">
+          Partido a partido · F = fase regular · MO = Mundial Oro · CO = Copa Oro
+        </h3>
         <FormaStrip partidos={todos} />
         {NOTAS[2026] && <p className="mt-3 text-xs text-dim">Nota: {NOTAS[2026]}</p>}
+      </Seccion>
+
+      {/* HISTORIA */}
+      <Seccion kicker="Desde 2020" titulo="Historia del CAF">
+        <Palmares />
+        <div className="mt-6">
+          <LineaDeTiempo />
+        </div>
+        <p className="mt-2 text-xs text-dim">
+          Datos de la planilla oficial (2026) y de las placas de @ligainterfacultadesoficial y @ingenieriafutbol_11. Los años anteriores todavía tienen huecos.
+        </p>
       </Seccion>
 
       {/* CARA A CARA */}

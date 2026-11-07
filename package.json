@@ -9,7 +9,8 @@
     "lint": "eslint",
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
-    "import:liga": "tsx scripts/import-liga.ts"
+    "import:liga": "tsx scripts/import-liga.ts",
+    "cargar:temporada": "tsx scripts/cargar-temporada.ts"
   },
   "dependencies": {
     "@supabase/ssr": "^0.12.7",

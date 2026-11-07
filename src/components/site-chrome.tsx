@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const NAV = [
   { href: "/", label: "Inicio", corto: "Inicio" },
-  { href: "/temporada/2026", label: "Temporada 2026", corto: "2026" },
+  { href: "/temporada/2026", label: "Temporadas", corto: "Temporadas" },
   { href: "/dirigencia", label: "Dirigencia", corto: "Dirigencia" },
 ];
 

@@ -2,13 +2,14 @@ import { describe, expect, it } from "vitest";
 import temporada2026 from "../../data/public/temporada-2026.json";
 import { estadoCarne, habilitadoPara, vencimientosPorMes } from "./carne";
 import { calcularPresupuesto, SUPUESTOS_2027 } from "./presupuesto";
-import { caraACara, partidosDe, resumen } from "./stats";
+import { caraACara, partidosDe, resumen, tablaDe } from "./stats";
+import { parsearCsv } from "../../scripts/cargar-temporada";
 import type { Temporada } from "./tipos";
 
 const t = temporada2026 as Temporada;
 
 describe("stats 2026 (contra la planilla oficial)", () => {
-  const regular = partidosDe({ partidos: t.partidos.filter((p) => p.fase === "regular") }, "INGENIERIA");
+  const regular = partidosDe({ partidos: t.partidos.filter((p) => p.competencia === "fase-regular") }, "INGENIERIA");
   const r = resumen(regular);
   const oficial = t.tabla.find((f) => f.equipo === "INGENIERIA")!;
 
@@ -18,21 +19,59 @@ describe("stats 2026 (contra la planilla oficial)", () => {
     // La planilla 2026 suma 1 victoria y 2 goles más en la tabla que en los resultados
     // (un partido perdido figura como ganado, probablemente por fallo de mesa). Pendiente de confirmar.
     // Si la Liga lo corrige, este test avisa para sacar la nota de la web.
-    expect([oficial.g - r.g, oficial.p - r.p, oficial.gf - r.gf]).toEqual([1, -1, 2]);
+    expect([oficial.g - r.g, oficial.p - r.p, (oficial.gf ?? 0) - r.gf]).toEqual([1, -1, 2]);
   });
 
   it("incluye los cuartos contra Medicina (1-0 y 0-2)", () => {
     const todos = partidosDe(t, "INGENIERIA");
-    const cuartos = todos.filter((x) => x.partido.fase === "cuartos");
+    const cuartos = todos.filter((x) => x.partido.competencia === "copa-oro");
     expect(cuartos.map((x) => [x.rival, x.gf, x.gc])).toEqual([
       ["MEDICINA", 1, 0],
       ["MEDICINA", 0, 2],
     ]);
   });
 
+  it("Mundialito: eliminatoria y Serie A del Mundial Oro coinciden con las tablas de la planilla", () => {
+    const mund = partidosDe(t, "INGENIERIA").filter((x) => x.partido.competencia.startsWith("mundial"));
+    expect(mund.map((x) => [x.rival, x.gf, x.gc])).toEqual([
+      ["QUIMICA", 4, 2],
+      ["CONTADORES", 0, 3],
+      ["DERECHO", 1, 1],
+      ["IPA", 4, 0],
+    ]);
+    const serieA = tablaDe(t.partidos.filter((p) => p.competencia === "mundial-oro" && p.grupo === "Serie A"));
+    expect(serieA.map((f) => [f.equipo, f.pts, f.dif])).toEqual([
+      ["CONTADORES", 7, 4],
+      ["DERECHO", 5, 1],
+      ["INGENIERIA", 4, 1],
+      ["IPA", 0, -6],
+    ]);
+    const serieB = tablaDe(t.partidos.filter((p) => p.competencia === "mundial-oro" && p.grupo === "Serie B"));
+    expect(serieB.map((f) => [f.equipo, f.pts, f.dif])).toEqual([
+      ["MEDICINA", 7, 4],
+      ["ISEF", 7, 2],
+      ["EMA", 3, 5],
+      ["ODONTOLOGIA", 0, -11],
+    ]);
+  });
+
+  it("resumen de las tres etapas", () => {
+    expect(t.etapas.map((e) => e.etapa)).toEqual(["fase-regular", "mundial", "playoffs"]);
+  });
+
   it("cara a cara suma todos los partidos", () => {
     const h = caraACara(regular);
     expect(h.reduce((s, x) => s + x.pj, 0)).toBe(regular.length);
+  });
+});
+
+describe("carga manual de temporadas", () => {
+  it("lee el CSV y normaliza el rival", () => {
+    const ps = parsearCsv("competencia,instancia,nro,grupo,fecha,rival,gf,gc,penales\ncopa-oro,cuartos,2,,2025-10-11,Química,0,0,4-3", 2025);
+    expect(ps[0]).toMatchObject({ competencia: "copa-oro", instancia: "cuartos", fecha_nro: 2, local: "INGENIERIA", visitante: "QUIMICA", goles_local: 0, penales: "4-3" });
+  });
+  it("rechaza competencias inventadas", () => {
+    expect(() => parsearCsv("competencia,instancia,rival,gf,gc\ncopa-bronce,final,X,1,0", 2025)).toThrow(/competencia/);
   });
 });
 

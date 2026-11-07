@@ -1,0 +1,214 @@
+{
+  "fuente": "Placas de @ligainterfacultadesoficial y epígrafes de @ingenieriafutbol_11 (Instagram)",
+  "resumen": "Semifinal · Copa Oro",
+  "completitud": "parcial",
+  "etapas": [
+    {
+      "etapa": "fase-regular",
+      "titulo": "7.º de 15",
+      "detalle": "21 pts · 6G 3E 5P · 16-21"
+    },
+    {
+      "etapa": "playoffs",
+      "titulo": "Semifinal · Copa Oro",
+      "detalle": "Le ganó 2-0 a Química (2.º de la tabla) en cuartos"
+    }
+  ],
+  "tabla": [
+    {
+      "pos": 1,
+      "equipo": "MEDICINA",
+      "pj": 14,
+      "g": 11,
+      "e": 1,
+      "p": 2,
+      "gf": 41,
+      "gc": 11,
+      "dif": 30,
+      "pts": 34
+    },
+    {
+      "pos": 2,
+      "equipo": "QUIMICA",
+      "pj": 14,
+      "g": 9,
+      "e": 4,
+      "p": 1,
+      "gf": 24,
+      "gc": 9,
+      "dif": 15,
+      "pts": 31
+    },
+    {
+      "pos": 3,
+      "equipo": "ISEF",
+      "pj": 14,
+      "g": 9,
+      "e": 2,
+      "p": 3,
+      "gf": 28,
+      "gc": 14,
+      "dif": 14,
+      "pts": 29
+    },
+    {
+      "pos": 4,
+      "equipo": "CONTADORES",
+      "pj": 14,
+      "g": 8,
+      "e": 4,
+      "p": 2,
+      "gf": 24,
+      "gc": 11,
+      "dif": 13,
+      "pts": 28
+    },
+    {
+      "pos": 5,
+      "equipo": "PSICOLOGIA",
+      "pj": 14,
+      "g": 8,
+      "e": 3,
+      "p": 3,
+      "gf": 26,
+      "gc": 12,
+      "dif": 14,
+      "pts": 27
+    },
+    {
+      "pos": 6,
+      "equipo": "IPA",
+      "pj": 14,
+      "g": 7,
+      "e": 1,
+      "p": 6,
+      "gf": 29,
+      "gc": 26,
+      "dif": 3,
+      "pts": 22
+    },
+    {
+      "pos": 7,
+      "equipo": "INGENIERIA",
+      "pj": 14,
+      "g": 6,
+      "e": 3,
+      "p": 5,
+      "gf": 16,
+      "gc": 21,
+      "dif": -5,
+      "pts": 21
+    },
+    {
+      "pos": 8,
+      "equipo": "EMA",
+      "pj": 14,
+      "g": 6,
+      "e": 2,
+      "p": 6,
+      "gf": 22,
+      "gc": 21,
+      "dif": 1,
+      "pts": 20
+    },
+    {
+      "pos": 9,
+      "equipo": "DERECHO",
+      "pj": 14,
+      "g": 5,
+      "e": 4,
+      "p": 5,
+      "gf": 16,
+      "gc": 16,
+      "dif": 0,
+      "pts": 19
+    },
+    {
+      "pos": 10,
+      "equipo": "CIENCIAS",
+      "pj": 14,
+      "g": 5,
+      "e": 3,
+      "p": 6,
+      "gf": 15,
+      "gc": 17,
+      "dif": -2,
+      "pts": 18
+    },
+    {
+      "pos": 11,
+      "equipo": "SOCIALES",
+      "pj": 14,
+      "g": 5,
+      "e": 1,
+      "p": 8,
+      "gf": 14,
+      "gc": 17,
+      "dif": -3,
+      "pts": 16
+    },
+    {
+      "pos": 12,
+      "equipo": "FIC",
+      "pj": 14,
+      "g": 4,
+      "e": 2,
+      "p": 8,
+      "gf": 16,
+      "gc": 24,
+      "dif": -8,
+      "pts": 14
+    },
+    {
+      "pos": 13,
+      "equipo": "CLINICAS",
+      "pj": 14,
+      "g": 3,
+      "e": 3,
+      "p": 8,
+      "gf": 19,
+      "gc": 25,
+      "dif": -6,
+      "pts": 12
+    },
+    {
+      "pos": 14,
+      "equipo": "ADMINISTRACION",
+      "pj": 14,
+      "g": 2,
+      "e": 1,
+      "p": 11,
+      "gf": 14,
+      "gc": 38,
+      "dif": -24,
+      "pts": 7
+    },
+    {
+      "pos": 15,
+      "equipo": "ECONOMISTAS",
+      "pj": 14,
+      "g": 0,
+      "e": 0,
+      "p": 14,
+      "gf": 0,
+      "gc": 42,
+      "dif": -42,
+      "pts": 0
+    }
+  ],
+  "campeones": [
+    {
+      "competencia": "copa-oro",
+      "equipo": "MEDICINA"
+    },
+    {
+      "competencia": "copa-plata",
+      "equipo": "DERECHO"
+    }
+  ],
+  "notas": [
+    "Medicina ganó su cuarto título de Copa Oro (bicampeón 2020-2021).",
+    "Ingeniería entró a la Copa Oro con un 0-0 ante FIC en la última fecha y en cuartos eliminó a Química 2-0.",
+    "Falta el resultado de la semifinal y los partidos de la fase regular."
+  ]
+}
