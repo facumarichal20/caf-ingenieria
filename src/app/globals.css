@@ -1,0 +1,110 @@
+@import "tailwindcss";
+
+/*
+ * Identidad CAF — sacada del escudo:
+ *   bastones negros y rosas, mitad gris hormigón (el edificio de la Facultad),
+ *   corte en diagonal y el "3" con flecha.
+ * Ver DESIGN.md antes de cambiar colores.
+ */
+:root {
+  --tinta: #0e0b0b;          /* negro de los bastones */
+  --tinta-2: #171313;
+  --tinta-3: #221c1c;
+  --rosa: #f4c6c4;           /* rosa del escudo */
+  --rosa-fuerte: #ea8f98;    /* rosa para acentos sobre negro */
+  --hormigon: #d9d4d2;       /* gris del edificio */
+  --hormigon-2: #a49b99;
+  --papel: #f7f3f2;
+
+  --bg: var(--tinta);
+  --surface: var(--tinta-2);
+  --surface-2: var(--tinta-3);
+  --text: var(--papel);
+  --text-dim: var(--hormigon-2);
+  --line: #2f2828;
+  --accent: var(--rosa);
+  --accent-strong: var(--rosa-fuerte);
+  --win: #8fd6a8;
+  --draw: var(--hormigon);
+  --loss: #f08a7e;
+  --warn: #f3c969;
+  color-scheme: dark;
+}
+
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme="dark"]) {
+    --bg: var(--papel);
+    --surface: #ffffff;
+    --surface-2: #efe9e8;
+    --text: var(--tinta);
+    --text-dim: #6b6260;
+    --line: #e2dad8;
+    --accent: #c4566a;
+    --accent-strong: #a8394f;
+    --win: #1f8a4c;
+    --draw: #6b6260;
+    --loss: #c0392b;
+    --warn: #a86b00;
+    color-scheme: light;
+  }
+}
+:root[data-theme="light"] {
+  --bg: var(--papel); --surface: #fff; --surface-2: #efe9e8; --text: var(--tinta); --text-dim: #6b6260;
+  --line: #e2dad8; --accent: #c4566a; --accent-strong: #a8394f; --win: #1f8a4c; --draw: #6b6260;
+  --loss: #c0392b; --warn: #a86b00; color-scheme: light;
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-text: var(--text);
+  --color-dim: var(--text-dim);
+  --color-line: var(--line);
+  --color-accent: var(--accent);
+  --color-accent-strong: var(--accent-strong);
+  --color-rosa: var(--rosa);
+  --color-tinta: var(--tinta);
+  --color-win: var(--win);
+  --color-draw: var(--draw);
+  --color-loss: var(--loss);
+  --color-warn: var(--warn);
+  --font-display: var(--font-big-shoulders), "Arial Narrow", sans-serif;
+  --font-sans: var(--font-plex-sans), system-ui, sans-serif;
+  --font-mono: var(--font-plex-mono), ui-monospace, monospace;
+}
+
+html { background: var(--bg); }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Bastones del escudo */
+.bastones {
+  background-image: repeating-linear-gradient(90deg, var(--tinta) 0 28px, var(--rosa) 28px 56px);
+}
+.bastones-finos {
+  background-image: repeating-linear-gradient(90deg, var(--tinta) 0 6px, var(--rosa) 6px 12px);
+}
+/* Corte diagonal del escudo */
+.corte-diagonal { clip-path: polygon(0 0, 100% 0, 100% 72%, 0 100%); }
+
+/* Números tabulares para todo lo que sea estadística */
+.num { font-family: var(--font-mono); font-variant-numeric: tabular-nums; }
+
+/* Regla de plano técnico (guiño a ingeniería) */
+.regla {
+  background-image:
+    repeating-linear-gradient(90deg, var(--line) 0 1px, transparent 1px 10px),
+    repeating-linear-gradient(90deg, var(--text-dim) 0 1px, transparent 1px 50px);
+  background-size: 100% 6px, 100% 12px;
+  background-repeat: no-repeat;
+  background-position: bottom left;
+  height: 12px;
+  opacity: 0.6;
+}
+
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
