@@ -8,6 +8,84 @@
     {
       "competencia": "fase-regular",
       "instancia": "fecha",
+      "fecha_nro": 1,
+      "grupo": "Grupo B",
+      "fecha": null,
+      "cancha": null,
+      "local": "INGENIERIA",
+      "visitante": "EMA",
+      "goles_local": 1,
+      "goles_visitante": 3,
+      "penales": null
+    },
+    {
+      "competencia": "fase-regular",
+      "instancia": "fecha",
+      "fecha_nro": 2,
+      "grupo": "Grupo B",
+      "fecha": null,
+      "cancha": null,
+      "local": "INGENIERIA",
+      "visitante": "QUIMICA",
+      "goles_local": 1,
+      "goles_visitante": 2,
+      "penales": null
+    },
+    {
+      "competencia": "fase-regular",
+      "instancia": "fecha",
+      "fecha_nro": 3,
+      "grupo": "Grupo B",
+      "fecha": null,
+      "cancha": null,
+      "local": "INGENIERIA",
+      "visitante": "ADMINISTRACION",
+      "goles_local": 1,
+      "goles_visitante": 2,
+      "penales": null
+    },
+    {
+      "competencia": "fase-regular",
+      "instancia": "fecha",
+      "fecha_nro": 4,
+      "grupo": "Grupo B",
+      "fecha": null,
+      "cancha": null,
+      "local": "INGENIERIA",
+      "visitante": "CIENCIAS",
+      "goles_local": 3,
+      "goles_visitante": 2,
+      "penales": null
+    },
+    {
+      "competencia": "fase-regular",
+      "instancia": "fecha",
+      "fecha_nro": 5,
+      "grupo": "Grupo B",
+      "fecha": null,
+      "cancha": null,
+      "local": "INGENIERIA",
+      "visitante": "FADU",
+      "goles_local": 0,
+      "goles_visitante": 2,
+      "penales": null
+    },
+    {
+      "competencia": "fase-regular",
+      "instancia": "fecha",
+      "fecha_nro": 6,
+      "grupo": "Grupo B",
+      "fecha": null,
+      "cancha": null,
+      "local": "INGENIERIA",
+      "visitante": "DERECHO",
+      "goles_local": 1,
+      "goles_visitante": 4,
+      "penales": null
+    },
+    {
+      "competencia": "fase-regular",
+      "instancia": "fecha",
       "fecha_nro": 7,
       "grupo": "Grupo B",
       "fecha": null,
@@ -183,6 +261,7 @@
   "notas": [
     "Primer título del CAF en la Liga. Después de una fase de grupos floja (7.º del Grupo B), el equipo ganó la Copa de Plata pasando dos series por penales, ante Contadores y Administración (4-2 las dos), y le ganó la final 2-0 a UDE en el Estadio Obdulio Varela (Villa Española).",
     "La tabla es la del Grupo B (el torneo 2020 se jugó en dos grupos de 8).",
-    "Medicina ganó la Copa Oro 2020 (su tercer título) ante Química."
+    "Medicina ganó la Copa Oro 2020 (su tercer título) ante Química.",
+    "El 3-2 a Ciencias (partido pendiente de la fecha 4) no se publicó con marcador: se calcula a partir de la tabla del grupo (7 GF, 21 GC)."
   ]
 }

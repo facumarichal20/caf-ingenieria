@@ -1,16 +1,31 @@
 {
   "fuente": "Epígrafes de @ingenieriafutbol_11 (Instagram) y notas de Bienestar Universitario",
-  "resumen": "Clasificó a la Copa Oro",
+  "resumen": "5.º en la fase regular · Copa Oro",
   "completitud": "parcial",
   "etapas": [
-    { "etapa": "fase-regular", "titulo": "Top 8", "detalle": "Clasificó a la Copa Oro con un 2-0 a Derecho en la fecha 14" },
-    { "etapa": "playoffs", "titulo": "Copa Oro", "detalle": "Resultado sin cargar" }
+    {
+      "etapa": "fase-regular",
+      "titulo": "5.º",
+      "detalle": "Clasificó a la Copa Oro con un 2-0 a Derecho en la fecha 14"
+    },
+    {
+      "etapa": "playoffs",
+      "titulo": "Copa Oro",
+      "detalle": "Resultado sin cargar"
+    }
   ],
   "campeones": [
-    { "competencia": "copa-oro", "equipo": "MEDICINA" },
-    { "competencia": "copa-plata", "equipo": "QUIMICA" }
+    {
+      "competencia": "copa-oro",
+      "equipo": "MEDICINA"
+    },
+    {
+      "competencia": "copa-plata",
+      "equipo": "QUIMICA"
+    }
   ],
   "notas": [
+    "5.º puesto en la fase regular (según el CAF al cerrar 2023: \"al igual que el año pasado quedamos 5tos\").",
     "2022 es el año en que asumió Carlos Díaz como DT y se consolidó el plantel actual.",
     "La cuenta de la Liga no publicó la temporada 2022; los resultados salen de las publicaciones del CAF. Falta la tabla final y los playoffs.",
     "Química ganó la Copa Plata 2022 ante FIC; Medicina fue campeón del Interfacultades."

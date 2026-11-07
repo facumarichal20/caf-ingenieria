@@ -1,4 +1,17 @@
-# Fuente: @ligainterfacultadesoficial y @ingenieriafutbol_11 (Instagram)
+# Fuente: @ligainterfacultadesoficial y @ingenieriafutbol_11 (Instagram). "nro" = fecha del fixture; algunas se jugaron otro día.
 competencia,instancia,nro,grupo,fecha,rival,gf,gc,penales,fuente
-fase-regular,fecha,15,,,FIC,0,0,,https://www.instagram.com/p/CWBxPK3peXV/
+fase-regular,fecha,1,,,EMA,2,5,,https://www.instagram.com/p/CRjlf3LI1lH/
+fase-regular,fecha,2,,,DERECHO,1,0,,https://www.instagram.com/p/CR70aNVMByk/
+fase-regular,fecha,6,,,ISEF,0,4,,https://www.instagram.com/p/CSPCjZJAbMx/
+fase-regular,fecha,4,,,PSICOLOGIA,1,1,,https://www.instagram.com/p/CSaJ5sFJV6O/
+fase-regular,fecha,5,,,CIENCIAS,1,0,,https://www.instagram.com/p/CSsvwBro5f4/
+fase-regular,fecha,3,,,MEDICINA,0,4,,https://www.instagram.com/p/CTCtnBdAtUt/
+fase-regular,fecha,7,,,ADMINISTRACION,3,1,,https://www.instagram.com/p/CTUlB13rKiz/
+fase-regular,fecha,9,,,QUIMICA,0,1,,https://www.instagram.com/p/CUN0xYiJSKN/
+fase-regular,fecha,10,,,SOCIALES,0,0,,https://www.instagram.com/p/CUgnV5VMnrI/
+fase-regular,fecha,11,,,ECONOMISTAS,3,0,,https://www.instagram.com/p/CUyIkFdg2ji/
+fase-regular,fecha,13,,,CONTADORES,0,3,,https://www.instagram.com/p/CVVn54wAhCX/
+fase-regular,fecha,14,,,CLINICAS,3,1,,https://www.instagram.com/p/CV4ReeiMhCJ/
+fase-regular,fecha,,,,IPA,2,1,,https://www.instagram.com/p/CV4ReeiMhCJ/
+fase-regular,fecha,15,,,FIC,0,0,,https://www.instagram.com/p/CWBfQSPp3Kr/
 copa-oro,cuartos,,,2021-11-13,QUIMICA,2,0,,https://www.instagram.com/p/CWPBdFmJT1f/

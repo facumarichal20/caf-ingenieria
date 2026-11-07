@@ -113,3 +113,17 @@ describe("presupuesto", () => {
     expect(calcularPresupuesto({ ...SUPUESTOS_2027, jugadoresQuePagan: 0 }).cuotaMensual).toBe(0);
   });
 });
+
+describe("temporadas históricas cargadas a mano", () => {
+  // Temporadas donde se cargaron todos los partidos de la fase regular: tienen que coincidir con la tabla publicada.
+  for (const anio of [2020, 2021, 2025]) {
+    it(`${anio}: los partidos suman lo mismo que la tabla oficial`, async () => {
+      const t = (await import(`../../data/public/temporada-${anio}.json`)).default as Temporada;
+      const ps = partidosDe({ partidos: t.partidos.filter((p) => p.competencia === "fase-regular") }, "INGENIERIA");
+      const r = resumen(ps);
+      const of = t.tabla.find((f) => f.equipo === "INGENIERIA")!;
+      expect([r.pj, r.g, r.e, r.p, r.gf - r.gc]).toEqual([of.pj, of.g, of.e, of.p, of.dif]);
+      if (of.gf !== null) expect([r.gf, r.gc]).toEqual([of.gf, of.gc]);
+    });
+  }
+});
