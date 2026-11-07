@@ -3,16 +3,128 @@
   "resumen": "Campeón · Copa Plata",
   "completitud": "parcial",
   "etapas": [
-    { "etapa": "fase-regular", "titulo": "Fase de grupos", "detalle": "Torneo 2020 en dos grupos (A y B) por la pandemia; Ingeniería jugó en el grupo B" },
-    { "etapa": "playoffs", "titulo": "Campeón · Copa Plata", "detalle": "Final 2-0 a UDE en el Estadio Obdulio Varela" }
+    {
+      "etapa": "fase-regular",
+      "titulo": "7.º Grupo B",
+      "detalle": "3 pts · 1G 0E 6P · 7-21 (torneo en dos grupos por la pandemia)"
+    },
+    {
+      "etapa": "playoffs",
+      "titulo": "Campeón · Copa Plata",
+      "detalle": "Contadores y Administración por penales (4-2 y 4-2); final 2-0 a UDE"
+    }
   ],
   "campeones": [
-    { "competencia": "copa-oro", "equipo": "MEDICINA" },
-    { "competencia": "copa-plata", "equipo": "INGENIERIA" }
+    {
+      "competencia": "copa-oro",
+      "equipo": "MEDICINA"
+    },
+    {
+      "competencia": "copa-plata",
+      "equipo": "INGENIERIA"
+    }
   ],
   "notas": [
-    "Primer título del CAF en la Liga: Copa de Plata 2020, ganándole la final 2-0 a UDE en el Estadio Obdulio Varela (Villa Española).",
-    "En cuartos y semifinales de la Plata pasó junto a FADU, Administración y UDE; faltan esos resultados.",
+    "Primer título del CAF en la Liga. Después de una fase de grupos floja (7.º del Grupo B), el equipo ganó la Copa de Plata pasando dos series por penales, ante Contadores y Administración (4-2 las dos), y le ganó la final 2-0 a UDE en el Estadio Obdulio Varela (Villa Española).",
+    "La tabla es la del Grupo B (el torneo 2020 se jugó en dos grupos de 8).",
     "Medicina ganó la Copa Oro 2020 (su tercer título) ante Química."
+  ],
+  "tabla": [
+    {
+      "pos": 1,
+      "equipo": "MEDICINA",
+      "pj": 7,
+      "g": 5,
+      "e": 2,
+      "p": 0,
+      "gf": 30,
+      "gc": 7,
+      "dif": 23,
+      "pts": 17
+    },
+    {
+      "pos": 2,
+      "equipo": "QUIMICA",
+      "pj": 7,
+      "g": 4,
+      "e": 1,
+      "p": 2,
+      "gf": 21,
+      "gc": 8,
+      "dif": 13,
+      "pts": 13
+    },
+    {
+      "pos": 3,
+      "equipo": "EMA",
+      "pj": 7,
+      "g": 4,
+      "e": 1,
+      "p": 2,
+      "gf": 11,
+      "gc": 7,
+      "dif": 4,
+      "pts": 13
+    },
+    {
+      "pos": 4,
+      "equipo": "DERECHO",
+      "pj": 7,
+      "g": 3,
+      "e": 2,
+      "p": 2,
+      "gf": 16,
+      "gc": 11,
+      "dif": 5,
+      "pts": 11
+    },
+    {
+      "pos": 5,
+      "equipo": "ADMINISTRACION",
+      "pj": 7,
+      "g": 3,
+      "e": 2,
+      "p": 2,
+      "gf": 11,
+      "gc": 10,
+      "dif": 1,
+      "pts": 11
+    },
+    {
+      "pos": 6,
+      "equipo": "FADU",
+      "pj": 7,
+      "g": 3,
+      "e": 1,
+      "p": 3,
+      "gf": 12,
+      "gc": 13,
+      "dif": -1,
+      "pts": 10
+    },
+    {
+      "pos": 7,
+      "equipo": "INGENIERIA",
+      "pj": 7,
+      "g": 1,
+      "e": 0,
+      "p": 6,
+      "gf": 7,
+      "gc": 21,
+      "dif": -14,
+      "pts": 3
+    },
+    {
+      "pos": 8,
+      "equipo": "CIENCIAS",
+      "pj": 7,
+      "g": 0,
+      "e": 1,
+      "p": 6,
+      "gf": 7,
+      "gc": 38,
+      "dif": -31,
+      "pts": 1
+    }
   ]
 }

@@ -7,7 +7,7 @@ import { ETAPAS } from "@/lib/tipos";
 
 /** Logros destacados, a mano: son pocos y cada uno merece su texto. */
 const LOGROS = [
-  { anio: 2020, titulo: "Campeón Copa Plata", detalle: "2-0 a UDE en el Obdulio Varela", oro: true },
+  { anio: 2020, titulo: "Campeón Copa Plata", detalle: "Dos series por penales y final 2-0 a UDE en el Obdulio Varela", oro: true },
   { anio: 2024, titulo: "Subcampeón del Mundialito", detalle: "3 series ganadas por penales; final 0-1 con ISEF", oro: false },
   { anio: 2024, titulo: "Semifinal Copa Oro", detalle: "Afuera con ISEF por un gol en el global", oro: false },
   { anio: 2025, titulo: "Semifinal Copa Oro", detalle: "Eliminó a ISEF y le ganó la ida 3-1 a Contadores", oro: false },
