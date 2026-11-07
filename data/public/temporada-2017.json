@@ -1,0 +1,121 @@
+{
+  "anio": 2017,
+  "torneo": "Liga Interfacultades — Bienestar Universitario",
+  "fuente": "Publicaciones de Ingeniería Futbol 11 (Facebook)",
+  "actualizado": "2026-11-07",
+  "equipo": "INGENIERIA",
+  "partidos": [
+    {
+      "competencia": "copa-plata",
+      "instancia": "semifinal",
+      "fecha_nro": null,
+      "grupo": null,
+      "fecha": null,
+      "cancha": null,
+      "local": "INGENIERIA",
+      "visitante": "ADMINISTRACION",
+      "goles_local": 4,
+      "goles_visitante": 1,
+      "penales": null
+    },
+    {
+      "competencia": "fase-regular",
+      "instancia": "fecha",
+      "fecha_nro": 2,
+      "grupo": "Grupo A",
+      "fecha": null,
+      "cancha": null,
+      "local": "INGENIERIA",
+      "visitante": "IPA",
+      "goles_local": 2,
+      "goles_visitante": 2,
+      "penales": null
+    },
+    {
+      "competencia": "fase-regular",
+      "instancia": "fecha",
+      "fecha_nro": 3,
+      "grupo": "Grupo A",
+      "fecha": null,
+      "cancha": null,
+      "local": "INGENIERIA",
+      "visitante": "DERECHO",
+      "goles_local": 3,
+      "goles_visitante": 1,
+      "penales": null
+    },
+    {
+      "competencia": "fase-regular",
+      "instancia": "fecha",
+      "fecha_nro": 4,
+      "grupo": "Grupo A",
+      "fecha": null,
+      "cancha": null,
+      "local": "INGENIERIA",
+      "visitante": "ADMINISTRACION",
+      "goles_local": 1,
+      "goles_visitante": 0,
+      "penales": null
+    },
+    {
+      "competencia": "fase-regular",
+      "instancia": "fecha",
+      "fecha_nro": 5,
+      "grupo": "Grupo A",
+      "fecha": null,
+      "cancha": null,
+      "local": "INGENIERIA",
+      "visitante": "ARQUITECTURA",
+      "goles_local": 0,
+      "goles_visitante": 0,
+      "penales": null
+    },
+    {
+      "competencia": "fase-regular",
+      "instancia": "fecha",
+      "fecha_nro": 7,
+      "grupo": "Grupo A",
+      "fecha": null,
+      "cancha": null,
+      "local": "INGENIERIA",
+      "visitante": "CONTADORES",
+      "goles_local": 2,
+      "goles_visitante": 1,
+      "penales": null
+    },
+    {
+      "competencia": "copa-oro",
+      "instancia": "cuartos",
+      "fecha_nro": null,
+      "grupo": null,
+      "fecha": null,
+      "cancha": null,
+      "local": "INGENIERIA",
+      "visitante": "ISEF",
+      "goles_local": 0,
+      "goles_visitante": 3,
+      "penales": null
+    }
+  ],
+  "tabla": [],
+  "resumen": "Cuartos de final · Copa Oro (Clausura)",
+  "etapas": [
+    {
+      "etapa": "fase-regular",
+      "titulo": "Clausura · Grupo A",
+      "detalle": "Clasificó a los playoffs de Oro con un 2-1 a Contadores en la última fecha"
+    },
+    {
+      "etapa": "playoffs",
+      "titulo": "Final Copa Plata (Apertura) · Cuartos Copa Oro (Clausura)",
+      "detalle": "Plata: w.o. de Notariado y 4-1 a Administración; Oro: 0-3 con ISEF"
+    }
+  ],
+  "campeones": [],
+  "completitud": "parcial",
+  "notas": [
+    "2017 se jugó en dos torneos: Apertura y Clausura.",
+    "Apertura: el CAF llegó a la final de la Copa Plata contra Ciencias (cuartos ganados por w.o. de Notariado, semifinal 4-1 a Administración). Falta confirmar el resultado de la final.",
+    "Clausura: 2-2 con IPA, 3-1 a Deportivo Maxiavelo (Derecho), 1-0 a Administración, 0-0 con Arquitectura, derrota con Ciencias Sociales y 2-1 a Contadores para clasificar a la Copa Oro, donde perdió 0-3 con ISEF en cuartos."
+  ]
+}

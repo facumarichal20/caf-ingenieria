@@ -12,11 +12,12 @@ const LOGROS = [
   { anio: 2024, titulo: "Semifinal Copa Oro", detalle: "Afuera con ISEF por un gol en el global", oro: false },
   { anio: 2025, titulo: "Semifinal Copa Oro", detalle: "Eliminó a ISEF y le ganó la ida 3-1 a Contadores", oro: false },
   { anio: 2021, titulo: "Semifinal Copa Oro", detalle: "2-0 a Química en cuartos", oro: false },
+  { anio: 2018, titulo: "Semifinal Copa Oro", detalle: "\"El año más competitivo del CAF\"; afuera con ISEF", oro: false },
 ];
 
 export function Palmares() {
   return (
-    <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-5">
+    <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
       {LOGROS.map((l) => (
         <Link
           key={l.anio + l.titulo}

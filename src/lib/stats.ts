@@ -109,6 +109,6 @@ const NOMBRES: Record<string, string> = {
   ODONTOLOGIA: "Odontología", ECONOMISTAS: "Economistas", CONTADORES: "Contadores", MEDICINA: "Medicina",
   SOCIALES: "Sociales", DERECHO: "Derecho", CIENCIAS: "Ciencias", ISEF: "ISEF", IPA: "IPA", EMA: "EMA", FIC: "FIC",
   ADMINISTRACION: "Administración", AGRONOMIA: "Agronomía", CLINICAS: "Dep. Clínicas", UDE: "UDE", FADU: "FADU",
-  "ODON / ADMIN": "Odonto. / Admin.",
+  "ODON / ADMIN": "Odonto. / Admin.", ARQUITECTURA: "Arquitectura", SOCIOLOGIA: "Sociología", NOTARIADO: "Notariado",
 };
 export const nombreEquipo = (s: string) => NOMBRES[s] ?? s.charAt(0) + s.slice(1).toLowerCase();

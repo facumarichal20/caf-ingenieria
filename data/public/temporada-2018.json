@@ -1,0 +1,200 @@
+{
+  "anio": 2018,
+  "torneo": "Liga Interfacultades — Bienestar Universitario",
+  "fuente": "Publicaciones de Ingeniería Futbol 11 y de CIM UdelaR (Facebook)",
+  "actualizado": "2026-11-07",
+  "equipo": "INGENIERIA",
+  "partidos": [
+    {
+      "competencia": "fase-regular",
+      "instancia": "fecha",
+      "fecha_nro": 1,
+      "grupo": null,
+      "fecha": null,
+      "cancha": null,
+      "local": "INGENIERIA",
+      "visitante": "FIC",
+      "goles_local": 4,
+      "goles_visitante": 0,
+      "penales": null
+    },
+    {
+      "competencia": "fase-regular",
+      "instancia": "fecha",
+      "fecha_nro": 2,
+      "grupo": null,
+      "fecha": null,
+      "cancha": null,
+      "local": "INGENIERIA",
+      "visitante": "ADMINISTRACION",
+      "goles_local": 4,
+      "goles_visitante": 3,
+      "penales": null
+    },
+    {
+      "competencia": "fase-regular",
+      "instancia": "fecha",
+      "fecha_nro": 3,
+      "grupo": null,
+      "fecha": null,
+      "cancha": null,
+      "local": "INGENIERIA",
+      "visitante": "ECONOMISTAS",
+      "goles_local": 2,
+      "goles_visitante": 1,
+      "penales": null
+    },
+    {
+      "competencia": "fase-regular",
+      "instancia": "fecha",
+      "fecha_nro": 4,
+      "grupo": null,
+      "fecha": null,
+      "cancha": null,
+      "local": "INGENIERIA",
+      "visitante": "PSICOLOGIA",
+      "goles_local": 1,
+      "goles_visitante": 0,
+      "penales": null
+    },
+    {
+      "competencia": "fase-regular",
+      "instancia": "fecha",
+      "fecha_nro": 5,
+      "grupo": null,
+      "fecha": null,
+      "cancha": null,
+      "local": "INGENIERIA",
+      "visitante": "CONTADORES",
+      "goles_local": 1,
+      "goles_visitante": 0,
+      "penales": null
+    },
+    {
+      "competencia": "fase-regular",
+      "instancia": "fecha",
+      "fecha_nro": 7,
+      "grupo": null,
+      "fecha": null,
+      "cancha": null,
+      "local": "INGENIERIA",
+      "visitante": "SOCIALES",
+      "goles_local": 3,
+      "goles_visitante": 1,
+      "penales": null
+    },
+    {
+      "competencia": "fase-regular",
+      "instancia": "fecha",
+      "fecha_nro": 9,
+      "grupo": null,
+      "fecha": null,
+      "cancha": null,
+      "local": "INGENIERIA",
+      "visitante": "DERECHO",
+      "goles_local": 2,
+      "goles_visitante": 1,
+      "penales": null
+    },
+    {
+      "competencia": "fase-regular",
+      "instancia": "fecha",
+      "fecha_nro": null,
+      "grupo": null,
+      "fecha": null,
+      "cancha": null,
+      "local": "INGENIERIA",
+      "visitante": "ISEF",
+      "goles_local": 0,
+      "goles_visitante": 3,
+      "penales": null
+    },
+    {
+      "competencia": "fase-regular",
+      "instancia": "fecha",
+      "fecha_nro": null,
+      "grupo": null,
+      "fecha": null,
+      "cancha": null,
+      "local": "INGENIERIA",
+      "visitante": "SOCIOLOGIA",
+      "goles_local": 1,
+      "goles_visitante": 0,
+      "penales": null
+    },
+    {
+      "competencia": "fase-regular",
+      "instancia": "fecha",
+      "fecha_nro": null,
+      "grupo": null,
+      "fecha": null,
+      "cancha": null,
+      "local": "INGENIERIA",
+      "visitante": "CIENCIAS",
+      "goles_local": 3,
+      "goles_visitante": 0,
+      "penales": null
+    },
+    {
+      "competencia": "fase-regular",
+      "instancia": "fecha",
+      "fecha_nro": null,
+      "grupo": null,
+      "fecha": null,
+      "cancha": null,
+      "local": "INGENIERIA",
+      "visitante": "ARQUITECTURA",
+      "goles_local": 2,
+      "goles_visitante": 1,
+      "penales": null
+    },
+    {
+      "competencia": "copa-oro",
+      "instancia": "cuartos",
+      "fecha_nro": null,
+      "grupo": null,
+      "fecha": null,
+      "cancha": null,
+      "local": "INGENIERIA",
+      "visitante": "SOCIALES",
+      "goles_local": 2,
+      "goles_visitante": 0,
+      "penales": null
+    },
+    {
+      "competencia": "copa-oro",
+      "instancia": "semifinal",
+      "fecha_nro": null,
+      "grupo": null,
+      "fecha": null,
+      "cancha": null,
+      "local": "INGENIERIA",
+      "visitante": "ISEF",
+      "goles_local": 0,
+      "goles_visitante": 2,
+      "penales": null
+    }
+  ],
+  "tabla": [],
+  "resumen": "Semifinal · Copa Oro",
+  "etapas": [
+    {
+      "etapa": "fase-regular",
+      "titulo": "Top 8",
+      "detalle": "Peleó la punta gran parte del año; 2.º por diferencia de gol tras las primeras fechas"
+    },
+    {
+      "etapa": "playoffs",
+      "titulo": "Semifinal · Copa Oro",
+      "detalle": "2-0 a Ciencias Sociales en cuartos; 0-2 con ISEF en semis"
+    }
+  ],
+  "campeones": [],
+  "completitud": "parcial",
+  "notas": [
+    "\"El año más competitivo del CAF\": se ganó la mayoría de los partidos y se llegó a semifinales de la Copa Oro.",
+    "Telmo Canabarro dirigió al equipo un año y medio; Sergio Baladán tomó el equipo para el cierre del campeonato y debutó con un 5-2.",
+    "Faltan algunos resultados de la fase regular (entre ellos el 5-2 del debut de Baladán, cuyo rival no figura en la publicación) y la tabla final. Medicina fue el campeón anual.",
+    "Algunos rivales (Administración 4-3, ISEF 0-3) se deducen del orden de las publicaciones: el anuncio del partido y, a continuación, el resultado."
+  ]
+}

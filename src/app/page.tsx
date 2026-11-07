@@ -67,7 +67,7 @@ export default function Inicio() {
       </Seccion>
 
       {/* HISTORIA */}
-      <Seccion kicker="Desde 2020" titulo="Historia del CAF">
+      <Seccion kicker="Desde 2017" titulo="Historia del CAF">
         <Palmares />
         <div className="mt-6">
           <LineaDeTiempo />

@@ -1,0 +1,10 @@
+# Fuente: publicaciones de Ingeniería Futbol 11 en Facebook (año confirmado con el filtro por año de Facebook)
+# 2017 se jugó en Apertura y Clausura. La Copa Plata de abajo es la del Apertura; la fase regular y la Copa Oro, del Clausura (Grupo A).
+competencia,instancia,nro,grupo,fecha,rival,gf,gc,penales,fuente
+copa-plata,semifinal,,,,ADMINISTRACION,4,1,,https://www.facebook.com/ingenieriafutbol11
+fase-regular,fecha,2,Grupo A,,IPA,2,2,,https://www.facebook.com/ingenieriafutbol11
+fase-regular,fecha,3,Grupo A,,DERECHO,3,1,,https://www.facebook.com/ingenieriafutbol11
+fase-regular,fecha,4,Grupo A,,ADMINISTRACION,1,0,,https://www.facebook.com/ingenieriafutbol11
+fase-regular,fecha,5,Grupo A,,ARQUITECTURA,0,0,,https://www.facebook.com/ingenieriafutbol11
+fase-regular,fecha,7,Grupo A,,CONTADORES,2,1,,https://www.facebook.com/ingenieriafutbol11
+copa-oro,cuartos,,,,ISEF,0,3,,https://www.facebook.com/ingenieriafutbol11
