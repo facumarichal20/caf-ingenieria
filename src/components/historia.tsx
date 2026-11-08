@@ -7,13 +7,13 @@ import { ETAPAS } from "@/lib/tipos";
 
 /** Logros destacados, a mano: son pocos y cada uno merece su texto. */
 const LOGROS = [
-  { anio: 2013, titulo: "Campeón Copa de Plata", detalle: "Copa de Plata", oro: true },
-  { anio: 2020, titulo: "Campeón Copa Plata", detalle: "Dos series por penales y final 2-0 a UDE en el Obdulio Varela", oro: true },
-  { anio: 2024, titulo: "Subcampeón del Mundialito", detalle: "3 series ganadas por penales; final 0-1 con ISEF", oro: false },
-  { anio: 2024, titulo: "Semifinal Copa Oro", detalle: "Afuera con ISEF por un gol en el global", oro: false },
-  { anio: 2025, titulo: "Semifinal Copa Oro", detalle: "Eliminó a ISEF y le ganó la ida 3-1 a Contadores", oro: false },
-  { anio: 2021, titulo: "Semifinal Copa Oro", detalle: "2-0 a Química en cuartos", oro: false },
-  { anio: 2018, titulo: "Semifinal Copa Oro", detalle: "3.º en la fase regular, la mejor registrada; afuera con ISEF", oro: false },
+  { anio: 2013, titulo: "Campeón Copa de Plata", detalle: "Copa de Plata", medalla: "plata" },
+  { anio: 2020, titulo: "Campeón Copa Plata", detalle: "Dos series por penales y final 2-0 a UDE en el Obdulio Varela", medalla: "plata" },
+  { anio: 2024, titulo: "Subcampeón del Mundialito", detalle: "3 series ganadas por penales; final 0-1 con ISEF", medalla: "plata" },
+  { anio: 2024, titulo: "Semifinal Copa Oro", detalle: "Afuera con ISEF por un gol en el global", medalla: null },
+  { anio: 2025, titulo: "Semifinal Copa Oro", detalle: "Eliminó a ISEF y le ganó la ida 3-1 a Contadores", medalla: null },
+  { anio: 2021, titulo: "Semifinal Copa Oro", detalle: "2-0 a Química en cuartos", medalla: null },
+  { anio: 2018, titulo: "Semifinal Copa Oro", detalle: "3.º en la fase regular, la mejor registrada; afuera con ISEF", medalla: null },
 ];
 
 export function Palmares() {
@@ -23,12 +23,12 @@ export function Palmares() {
         const className = clsx(
           "rounded-xl border p-4 transition",
           TEMPORADAS[l.anio] && "hover:border-accent/70",
-          l.oro ? "border-accent/60 bg-accent/15" : "border-line bg-surface",
+          l.medalla === "plata" ? "border-plata/60 bg-plata/10" : "border-line bg-surface",
         );
         const contenido = (
           <>
             <div className="flex items-center gap-2 text-xs uppercase tracking-wider text-dim">
-              <Trophy className={clsx("h-4 w-4", l.oro ? "text-accent" : "text-dim")} aria-hidden />
+              <Trophy className={clsx("h-4 w-4", l.medalla === "plata" ? "text-plata" : "text-dim")} aria-hidden />
               <span className="num">{l.anio}</span>
             </div>
             <div className="mt-2 font-display text-2xl font-extrabold uppercase leading-tight">{l.titulo}</div>

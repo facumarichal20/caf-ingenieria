@@ -12,6 +12,23 @@ export function StatTile({ label, value, sub, destacado }: { label: string; valu
   );
 }
 
+export function Marcador({ local, visitante, compacto = false, className }: { local: number; visitante: number; compacto?: boolean; className?: string }) {
+  return (
+    <span role="img" className={clsx("marcador inline-block font-bold", compacto ? "text-xl" : "text-3xl", className)} aria-label={`Resultado: ${local} a ${visitante}`}>
+      {local}–{visitante}
+    </span>
+  );
+}
+
+function siglaEquipo(equipo: string) {
+  const palabras = equipo.normalize("NFD").replace(/\p{Diacritic}/gu, "").split(/[\s/-]+/).filter(Boolean);
+  return palabras.length > 1 ? palabras.slice(0, 2).map((p) => p[0]).join("").toUpperCase() : (palabras[0] ?? "").slice(0, 3).toUpperCase();
+}
+
+export function InsigniaEquipo({ equipo }: { equipo: string }) {
+  return <span className="insignia-equipo" aria-hidden="true">{siglaEquipo(nombreEquipo(equipo))}</span>;
+}
+
 const COLOR = { G: "bg-win text-tinta", E: "bg-draw text-tinta", P: "bg-loss text-tinta" } as const;
 const RONDA = { octavos: "8vos", cuartos: "4tos", semifinal: "Semi", final: "Final" } as const;
 
@@ -34,11 +51,10 @@ export function FormaStrip({ partidos }: { partidos: PartidoEquipo[] }) {
             <span>{etiquetaCorta(x.partido)}</span>
           </div>
           <div className="px-2 py-1.5">
-            <div className="num text-xl font-semibold leading-none">
-              {x.gf}–{x.gc}
-            </div>
-            <div className="mt-1 truncate text-xs text-dim" title={nombreEquipo(x.rival)}>
-              vs {nombreEquipo(x.rival)}
+            <Marcador local={x.gf} visitante={x.gc} compacto />
+            <div className="mt-1 flex items-center gap-1.5 truncate text-xs text-dim" title={nombreEquipo(x.rival)}>
+              <InsigniaEquipo equipo={x.rival} />
+              <span>vs {nombreEquipo(x.rival)}</span>
             </div>
           </div>
         </li>

@@ -7,12 +7,13 @@
  * Ver DESIGN.md antes de cambiar colores.
  */
 :root {
-  --tinta: #0e0b0b;          /* negro de los bastones */
-  --tinta-2: #171313;
-  --tinta-3: #221c1c;
-  --rosa: #f4c6c4;           /* rosa del escudo */
-  --rosa-fuerte: #ea8f98;    /* rosa para acentos sobre negro */
-  --hormigon: #d9d4d2;       /* gris del edificio */
+  --tinta: #100808;          /* negro muestreado del escudo */
+  --tinta-2: #181010;
+  --tinta-3: #241a1a;
+  --rosa: #f8c0c4;           /* rosa claro del escudo */
+  --rosa-fuerte: #c09094;    /* rosa medio muestreado del escudo */
+  --plata: #c7c7c7;          /* gris del escudo para logros de plata */
+  --hormigon: #c7c7c7;       /* gris muestreado del edificio */
   --hormigon-2: #a49b99;
   --papel: #f7f3f2;
 
@@ -42,7 +43,7 @@
     --accent: #9f344d;
     --accent-strong: #a8394f;
     --win: #8fd6a8;
-    --draw: #d9d4d2;
+    --draw: #c7c7c7;
     --loss: #f08a7e;
     --warn: #f3c969;
     color-scheme: light;
@@ -50,7 +51,7 @@
 }
 :root[data-theme="light"] {
   --bg: var(--papel); --surface: #fff; --surface-2: #efe9e8; --text: var(--tinta); --text-dim: #6b6260;
-  --line: #e2dad8; --accent: #9f344d; --accent-strong: #a8394f; --win: #8fd6a8; --draw: #d9d4d2;
+  --line: #e2dad8; --accent: #9f344d; --accent-strong: #a8394f; --win: #8fd6a8; --draw: #c7c7c7;
   --loss: #f08a7e; --warn: #f3c969; color-scheme: light;
 }
 
@@ -64,6 +65,7 @@
   --color-accent: var(--accent);
   --color-accent-strong: var(--accent-strong);
   --color-rosa: var(--rosa);
+  --color-plata: var(--plata);
   --color-tinta: var(--tinta);
   --color-win: var(--win);
   --color-draw: var(--draw);
@@ -92,8 +94,10 @@ body {
 /* Corte diagonal del escudo */
 .corte-diagonal { clip-path: polygon(0 0, 100% 0, 100% 72%, 0 100%); }
 
-/* Números tabulares para todo lo que sea estadística */
+/* Números tabulares y marcadores de fútbol */
 .num { font-family: var(--font-mono); font-variant-numeric: tabular-nums; }
+.marcador { font-family: var(--font-mono); font-variant-numeric: tabular-nums; font-feature-settings: "tnum" 1; letter-spacing: -.07em; line-height: .9; }
+.insignia-equipo { display: inline-grid; width: 2rem; height: 2rem; flex: none; place-items: center; border: 1px solid var(--line); background: var(--surface-2); color: var(--accent); font-size: .6rem; font-weight: 700; letter-spacing: .02em; }
 
 /* Regla de plano técnico (guiño a ingeniería) */
 .regla {

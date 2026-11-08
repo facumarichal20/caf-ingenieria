@@ -39,7 +39,7 @@ export default function Inicio() {
             </div>
           </div>
           <div className="relative flex items-center justify-center">
-            <div className="rounded-full bg-bg/70 p-6 backdrop-blur-sm">
+            <div className="rounded-full bg-bg p-6">
               <Image src="/brand/escudo-estrellas.png" alt="Escudo del CAF" width={260} height={260} priority className="h-auto w-40 drop-shadow-2xl sm:w-[260px]" />
             </div>
           </div>

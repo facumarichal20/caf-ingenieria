@@ -6,20 +6,20 @@ Todo sale del escudo: **bastones negros y rosas**, la mitad **gris hormigón** c
 
 | Token | Hex | Uso |
 |---|---|---|
-| `--tinta` | `#0e0b0b` | Fondo (modo oscuro por defecto: noche de partido) |
-| `--rosa` | `#f4c6c4` | Acento principal sobre negro |
-| `--rosa-fuerte` | `#ea8f98` | Hover, énfasis |
-| `--hormigon` | `#d9d4d2` | Texto secundario claro, empates |
+| `--tinta` | `#100808` | Negro muestreado del escudo; fondo oscuro |
+| `--rosa` | `#f8c0c4` | Rosa claro muestreado del escudo; acento principal |
+| `--rosa-fuerte` | `#c09094` | Rosa medio muestreado del escudo |
+| `--hormigon` / `--plata` | `#c7c7c7` | Gris del escudo; empates y logros de plata |
 | `--papel` | `#f7f3f2` | Texto principal / fondo en modo claro |
 
 Resultados: `--win` (verde), `--draw` (hormigón), `--loss` (rojo). Alertas de carné: `--warn` (amarillo).
-En modo claro el rosa se oscurece (`#c4566a`) para tener contraste suficiente sobre blanco.
+En modo claro el rosa se oscurece (`#9f344d`) para tener contraste suficiente sobre blanco. Los resultados destacados usan medallas plateadas, tomadas del gris del escudo.
 
 ## Tipografía
 
-- **Big Shoulders** (display): títulos en mayúsculas, condensada e industrial, guiño a ingeniería.
+- **Big Shoulders** (display): títulos en mayúsculas, condensada e industrial, guiño a ingeniería y a las placas de partido.
 - **IBM Plex Sans**: texto.
-- **IBM Plex Mono** (`.num`): **todos** los números de estadísticas, con cifras tabulares para que las columnas alineen.
+- **IBM Plex Mono** (`.num`, `.marcador`): estadísticas y marcadores, con cifras tabulares para que las columnas alineen.
 
 ## Motivos
 
@@ -33,3 +33,4 @@ En modo claro el rosa se oscurece (`#c4566a`) para tener contraste suficiente so
 2. Los números son protagonistas: grandes, monoespaciados, con poco adorno.
 3. Pensado para el celular primero: se usa al costado de la cancha.
 4. Nada de templates genéricos: si parece de cualquier club, no va.
+5. Sin degradados violeta ni superficies translúcidas con blur. Los rivales sin escudo usan iniciales en una insignia, nunca imágenes inventadas.

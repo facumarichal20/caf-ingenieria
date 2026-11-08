@@ -17,7 +17,7 @@ const NAV = [
 
 export function SiteHeader() {
   return (
-    <header className="relative z-20 border-b border-line bg-bg/90 backdrop-blur">
+    <header className="relative z-20 border-b border-line bg-bg">
       <div className="mx-auto flex max-w-6xl flex-wrap items-center gap-3 px-4 py-3">
         <Link href="/" className="flex items-center gap-2.5" aria-label="CAF, inicio">
           <Image src="/brand/escudo.png" alt="" width={30} height={35} priority className="w-[30px]" style={{ height: "auto" }} />
