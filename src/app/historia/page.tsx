@@ -23,8 +23,8 @@ export default function Historia() {
       <div className="mx-auto max-w-6xl px-4 pt-12">
         <p className="text-xs uppercase tracking-[0.2em] text-accent">Liga Interfacultades</p>
         <h1 className="mt-3 font-display text-6xl font-black uppercase">Historia del CAF</h1>
-        <p className="mt-4 max-w-2xl text-dim">
-          El recorrido del CAF en la Liga Interfacultades.
+        <p className="mt-4 max-w-2xl text-lg text-text">
+          Representando a <a className="text-accent hover:underline" href="https://www.instagram.com/fingudelar/" target="_blank" rel="noreferrer">@fingudelar</a> en la <a className="text-accent hover:underline" href="https://www.instagram.com/ligainterfacultadesoficial/" target="_blank" rel="noreferrer">@ligainterfacultadesoficial</a> desde 2010.
         </p>
       </div>
       <Seccion titulo="El CAF en números">

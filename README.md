@@ -9,7 +9,7 @@ Instagram: [@ingenieriafutbol_11](https://www.instagram.com/ingenieriafutbol_11/
 | Sección | Ruta | Estado |
 |---|---|---|
 | Inicio: rumbo a 2027, el año en números, cuentas pendientes, tabla | `/` | ✅ |
-| Temporada (partidos, cara a cara, tabla) | `/temporada/2026` | ✅ |
+| Temporada (partidos, tabla y etapas) | `/temporada/2026` | ✅ |
 | Dirigencia: fichajes y carné de salud (semáforo) | `/dirigencia/carnes` | ✅ (datos de ejemplo hasta tener login) |
 | Dirigencia: planificador de presupuesto 2027 | `/dirigencia/presupuesto` | ✅ |
 | Finanzas, cuotas, beneficios, placas IG, login | — | 🔜 ver [PLAN-CAF.md](PLAN-CAF.md) |

@@ -48,7 +48,8 @@ export function SiteFooter() {
         <a className="hover:text-text" href="https://www.instagram.com/ingenieriafutbol_11/" target="_blank" rel="noreferrer">
           Instagram @ingenieriafutbol_11
         </a>
-        <a href="https://www.facebook.com/ingenieriafutbol11/">Facebook CAF</a><a href="https://www.instagram.com/ligainterfacultadesoficial/">Instagram Liga</a><span>Datos: Liga y publicaciones del CAF</span>
+        <a href="https://www.facebook.com/ingenieriafutbol11/">Facebook CAF</a><a href="https://www.instagram.com/ligainterfacultadesoficial/">Instagram Liga</a>
+        <span>Representando a <a className="hover:text-text" href="https://www.instagram.com/fingudelar/" target="_blank" rel="noreferrer">@fingudelar</a> en la <a className="hover:text-text" href="https://www.instagram.com/ligainterfacultadesoficial/" target="_blank" rel="noreferrer">@ligainterfacultadesoficial</a> desde 2010.</span>
       </div>
     </footer>
   );
