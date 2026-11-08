@@ -14,7 +14,6 @@ const NAV_PRINCIPAL = [
 
 const NAV_MAS = [
   { href: "/plantel", label: "Plantel" },
-  { href: "/noticias", label: "Noticias" },
   { href: "/club", label: "El club" },
   { href: "/apoyos", label: "Apoyos" },
   { href: "/mi-equipo", label: "Mi equipo" },
@@ -48,7 +47,9 @@ export function SiteHeader() {
             <div className="absolute right-0 top-full z-30 mt-2 min-w-44 border border-line bg-bg py-1 shadow-lg"><EnlacesMas /></div>
           </details>
         </nav>
-        <details className="menu-movil relative md:hidden">
+        <div className="flex items-center gap-2 md:hidden">
+        <Link href="/#sumate" className="boton min-h-11 px-4 py-2 text-sm">Sumate</Link>
+        <details className="menu-movil relative">
           <summary className="flex h-11 w-11 cursor-pointer list-none items-center justify-center border border-line text-text" aria-label="Menú">
             <Menu size={24} aria-hidden="true" />
           </summary>
@@ -58,6 +59,7 @@ export function SiteHeader() {
             <EnlacesMas />
           </nav>
         </details>
+        </div>
       </div>
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 pb-3">
         <span className="text-xs font-medium uppercase tracking-[0.16em] text-dim">Seguinos</span>
@@ -71,7 +73,7 @@ export function SiteHeader() {
 export function SiteFooter() {
   return (
     <>
-      <footer className="mt-20 border-t border-line pb-16 md:pb-0">
+      <footer className="mt-20 border-t border-line">
         <div className="mx-auto flex max-w-6xl flex-col gap-5 px-4 py-6 sm:flex-row sm:items-center sm:justify-between">
           <div className="flex flex-col gap-1 text-sm text-dim">
           <span>Ingeniería Fútbol 11 · Liga Interfacultades UdelaR</span>
@@ -80,7 +82,6 @@ export function SiteFooter() {
           <SocialLinks />
         </div>
       </footer>
-      <Link href="/#sumate" className="fixed inset-x-3 bottom-3 z-40 flex min-h-12 items-center justify-center border border-tinta bg-accent px-4 font-semibold text-tinta shadow-lg md:hidden">Sumate</Link>
     </>
   );
 }

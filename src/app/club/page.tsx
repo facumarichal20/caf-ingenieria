@@ -1,6 +1,62 @@
 import Image from "next/image";
-import { CabeceraPagina, Seccion, AvisoVacio } from "@/components/stats-ui";
+import { CabeceraPagina, Seccion } from "@/components/stats-ui";
 import { metadataPagina } from "@/lib/metadata";
-import dirigentes from "../../../data/club/dirigencia.json";
-export const metadata = metadataPagina("El club","Historia, colores y cómo sumarte a Ingeniería Fútbol 11.","/club");
-export default function Club() { return <><CabeceraPagina titulo="El club" descripcion="Ingeniería Fútbol 11 · Rosado y negro desde 2010." /><Seccion titulo="Nuestros colores"><div className="grid items-center gap-6 sm:grid-cols-[180px_1fr]"><Image src="/brand/escudo.png" alt="Escudo del CAF: bastones negros y rosados y la Facultad de Ingeniería" width={150} height={180} className="w-[150px]" style={{height:"auto"}}/><p>Representamos a la Facultad de Ingeniería en la Liga Interfacultades de la Udelar. El escudo reúne los bastones negros y rosados y el gris del edificio de la Facultad. En 2020 levantamos la Copa de Plata.</p></div></Seccion><Seccion titulo="Cuerpo técnico"><p>Rodrigo “Tero” Silveira · Director técnico</p><p>Chona Medina · Ayudante técnico</p><a className="text-sm text-accent" href="https://www.instagram.com/p/DZK9RyuOny4/">Presentación del cuerpo técnico en 2026</a></Seccion><Seccion titulo="Dirigencia">{dirigentes.length ? (dirigentes as {nombre:string;cargo:string}[]).map(d=><p key={d.nombre}>{d.nombre} · {d.cargo}</p>) : <AvisoVacio>Los nombres y cargos de la dirigencia se publicarán cuando estén confirmados.</AvisoVacio>}</Seccion><Seccion titulo="Sumate al CAF"><p>¿Estudiás en Ingeniería y querés jugar? Escribinos por Instagram para conocer los entrenamientos y cómo sumarte.</p><a href="https://www.instagram.com/ingenieriafutbol_11/" className="boton mt-4">Contactar al CAF</a></Seccion></>; }
+
+export const metadata = metadataPagina("El club", "Quiénes somos, el cuerpo técnico y la Facultad que representa Ingeniería Fútbol 11.", "/club");
+
+const CUERPO_TECNICO = [
+  { nombre: "Rodrigo “Tero” Silveira", cargo: "Director técnico" },
+  { nombre: "Ignacio Medina", cargo: "Ayudante técnico" },
+];
+
+export default function Club() {
+  return (
+    <>
+      <CabeceraPagina titulo="El club" descripcion="Ingeniería Fútbol 11 · Rosado y negro desde 2010." />
+
+      <Seccion titulo="Quiénes somos">
+        <div className="grid items-center gap-6 sm:grid-cols-[180px_1fr]">
+          <Image src="/brand/escudo.png" alt="Escudo del CAF: bastones negros y rosados y la Facultad de Ingeniería" width={150} height={180} className="w-[150px]" style={{ height: "auto" }} />
+          <div className="max-w-2xl space-y-4">
+            <p className="text-lg">
+              Las iniciales <strong className="text-accent">CAF</strong> son de <strong>Club Absurdo de Fútbol</strong>.
+            </p>
+            <p>
+              Representamos a la Facultad de Ingeniería en la Liga Interfacultades de la Udelar. Con dos Copas de Plata en la vitrina, año a año buscamos engranajes para formar nuestro plantel.
+            </p>
+            <p className="text-dim">El escudo reúne los bastones negros y rosados y el gris del edificio de la Facultad.</p>
+          </div>
+        </div>
+      </Seccion>
+
+      <Seccion titulo="Cuerpo técnico">
+        <ul className="grid gap-3 sm:grid-cols-2">
+          {CUERPO_TECNICO.map((p) => (
+            <li key={p.nombre} className="rounded-xl border border-line bg-surface p-5">
+              <div className="text-xs uppercase tracking-wider text-dim">{p.cargo}</div>
+              <div className="mt-1 font-display text-2xl font-extrabold uppercase">{p.nombre}</div>
+            </li>
+          ))}
+        </ul>
+      </Seccion>
+
+      <Seccion titulo="La Facultad">
+        <div className="max-w-2xl space-y-4">
+          <p>
+            Jugamos por la Facultad de Ingeniería de la Udelar, en el Parque Rodó, frente a la rambla de Montevideo. Su edificio, el mismo que aparece en nuestro escudo, es una de las obras más reconocidas de la arquitectura moderna uruguaya.
+          </p>
+          <p className="text-dim">Av. Julio Herrera y Reissig 565, Montevideo.</p>
+          <div className="flex flex-wrap gap-4 text-sm">
+            <a className="text-accent hover:underline" href="https://www.fing.edu.uy/" target="_blank" rel="noopener noreferrer">fing.edu.uy</a>
+            <a className="text-accent hover:underline" href="https://www.instagram.com/fingudelar/" target="_blank" rel="noopener noreferrer">@fingudelar</a>
+          </div>
+        </div>
+      </Seccion>
+
+      <Seccion titulo="Sumate al CAF">
+        <p>¿Estudiás en Ingeniería y querés jugar? Escribinos por Instagram para conocer los entrenamientos y cómo sumarte.</p>
+        <a href="https://www.instagram.com/ingenieriafutbol_11/" className="boton mt-4">Contactar al CAF</a>
+      </Seccion>
+    </>
+  );
+}

@@ -3,7 +3,9 @@ import { notFound } from "next/navigation";
 import { CabeceraPagina, Seccion } from "@/components/stats-ui";
 import { leerNoticias } from "@/lib/noticias";
 import { metadataPagina } from "@/lib/metadata";
-export async function generateStaticParams() { return (await leerNoticias()).map(n=>({slug:n.slug})); }
+// Sección oculta por ahora: sin páginas generadas y sin rutas dinámicas, toda /noticias/* da 404.
+export const dynamicParams = false;
+export async function generateStaticParams(): Promise<{slug:string}[]> { return []; }
 export async function generateMetadata({params}:{params:Promise<{slug:string}>}) {
  const {slug}=await params; const n=(await leerNoticias()).find(n=>n.slug===slug);
 

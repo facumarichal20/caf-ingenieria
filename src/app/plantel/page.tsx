@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { Goleadores } from "@/components/goleadores";
 import { metadataPagina } from "@/lib/metadata";
 
 import { Seccion } from "@/components/stats-ui";
@@ -35,7 +34,6 @@ export default async function Plantel() {
           </ul>
         )}
       </Seccion>
-      <Goleadores />
     </>
   );
 }
