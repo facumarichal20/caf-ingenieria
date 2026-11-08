@@ -29,7 +29,7 @@ export default function Inicio() {
         <div className="bastones corte-diagonal absolute inset-y-0 right-0 hidden w-[42%] opacity-90 md:block" aria-hidden="true" />
         <div className="relative mx-auto grid max-w-6xl items-center gap-8 px-4 py-12 sm:py-16 md:grid-cols-[1.2fr_1fr] md:py-20">
           <div>
-            <p className="text-xs uppercase tracking-[0.25em] text-accent">CAF · Fútbol de Ingeniería</p>
+            <p className="text-xs uppercase tracking-[0.25em] text-accent">CAF · Selección de fútbol de la Facultad de Ingeniería, Udelar</p>
             <h1 className="mt-3 font-display text-6xl font-black uppercase leading-[0.85] sm:text-8xl">Temporada<br />2027</h1>
             <p className="mt-5 max-w-xl text-lg">
               Representando a <a className="text-accent hover:underline" href="https://www.instagram.com/fingudelar/" target="_blank" rel="noreferrer">@fingudelar</a> en la <a className="text-accent hover:underline" href="https://www.instagram.com/ligainterfacultadesoficial/" target="_blank" rel="noreferrer">@ligainterfacultadesoficial</a> desde 2010.
@@ -64,6 +64,10 @@ export default function Inicio() {
           <div className="bastones-finos absolute inset-x-0 top-0 h-1" aria-hidden="true" />
           <p className="text-xs uppercase tracking-[0.2em] text-accent">CAF · 2027</p>
           <h2 className="mt-3 max-w-3xl font-display text-4xl font-black uppercase leading-none sm:text-6xl">Temporada 2027: armamos el plantel</h2>
+          <div className="mt-8 grid gap-6 border-t border-line pt-6 sm:grid-cols-2">
+            <div><h3 className="text-sm uppercase tracking-wider text-dim">¿Quién puede jugar?</h3><p className="mt-2">Estudiantes de la Facultad de Ingeniería, Udelar.</p></div>
+            <div><h3 className="text-sm uppercase tracking-wider text-dim">Qué necesitás</h3><p className="mt-2">Ganas de comprometerte con el equipo y escribirnos por Instagram.</p></div>
+          </div>
           <div className="mt-8 grid gap-6 md:grid-cols-[1fr_auto] md:items-end">
             <div>
               <h3 className="text-sm uppercase tracking-wider text-dim">Entrenamientos</h3>

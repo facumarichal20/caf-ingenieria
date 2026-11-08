@@ -46,6 +46,9 @@ npm run build
 - `data/private/`: **nunca se sube** (está en `.gitignore`). Ahí van la planilla original y los fichados con vencimiento de carné. El importador guarda la cédula solo como hash y los últimos 3 dígitos.
 - Si no tenés la carpeta `data/private/`, la sección de dirigencia muestra datos de ejemplo inventados. Así cualquiera puede colaborar sin ver datos personales.
 
+## Postales
+
+Organizá las fotos originales en `public/postales/<año>/<fecha-y-datos-del-partido>/`. Por ejemplo, `public/postales/2024/2024-07-27-final-mundialito-isef/01.jpg`. Ejecutá `npm run postales:optimizar` para generar WebP, miniaturas y `data/postales.json`. La galería muestra «Postales próximamente» mientras no haya fotos.
 ## Stack
 
 Next.js 16 (App Router) · TypeScript · Tailwind CSS 4 · Supabase (base, login y permisos; pendiente de conectar) · Vercel (hosting gratis).

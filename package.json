@@ -10,7 +10,8 @@
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
     "import:liga": "tsx scripts/import-liga.ts",
-    "cargar:temporada": "tsx scripts/cargar-temporada.ts"
+    "cargar:temporada": "tsx scripts/cargar-temporada.ts",
+    "postales:optimizar": "tsx scripts/optimizar-postales.ts"
   },
   "dependencies": {
     "@supabase/ssr": "^0.12.7",
