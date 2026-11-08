@@ -45,3 +45,8 @@ next-env.d.ts
 *.xlsm
 *.xlsx
 !.env.example
+
+# Escudos originales: solo se suben los .webp optimizados
+public/escudos/*
+!public/escudos/*.webp
+!public/escudos/README.md
