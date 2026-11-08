@@ -2,7 +2,7 @@ import { describe, expect, it } from "vitest";
 import temporada2026 from "../../data/public/temporada-2026.json";
 import { estadoCarne, habilitadoPara, vencimientosPorMes } from "./carne";
 import { calcularPresupuesto, SUPUESTOS_2027 } from "./presupuesto";
-import { caraACara, partidosDe, resumen, tablaDe } from "./stats";
+import { partidosDe, resumen, tablaDe } from "./stats";
 import { parsearCsv } from "../../scripts/cargar-temporada";
 import type { Temporada } from "./tipos";
 
@@ -59,10 +59,6 @@ describe("stats 2026 (contra la planilla oficial)", () => {
     expect(t.etapas.map((e) => e.etapa)).toEqual(["fase-regular", "mundial", "playoffs"]);
   });
 
-  it("cara a cara suma todos los partidos", () => {
-    const h = caraACara(regular);
-    expect(h.reduce((s, x) => s + x.pj, 0)).toBe(regular.length);
-  });
 });
 
 describe("carga manual de temporadas", () => {

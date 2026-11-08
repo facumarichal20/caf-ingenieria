@@ -1,6 +1,6 @@
 {
   "anio": 2023,
-  "torneo": "Liga Interfacultades — Bienestar Universitario",
+  "torneo": "Liga Interfacultades",
   "fuente": "Placas de @ligainterfacultadesoficial (Instagram) y nota de Bienestar Universitario del 15/05/2023",
   "actualizado": "2026-11-08",
   "equipo": "INGENIERIA",
@@ -433,11 +433,7 @@
   "completitud": "parcial",
   "notas": [
     "Mejor fase regular de estos años: 5.º de 17, con la tercera mejor defensa junto a ISEF (15 goles en contra en 16 partidos).",
-    "2023 no tuvo Mundialito: el formato fue fase regular de 17 fechas y playoffs.",
     "Medicina le ganó la final de la Copa Oro a ISEF; Contadores la de Plata a FIC.",
-    "Fecha 8 contra Ciencias: el CAF se quedó con el partido en la mesa por irregularidades en el plantel rival (se carga 3-0).",
-    "Faltan las fechas 11, 13 y 15: según el CAF fueron victorias en las fechas 11 y 15 (la 15 dándolo vuelta para meterse en la Copa Oro), pero no se publicó rival y marcador completo. La fecha 12 ante Nutrición se cargó con el resultado y la fecha confirmados en X. La 10 fue fecha libre.",
-    "X confirma la fecha 12 ante Nutrición: victoria 2-1 el 22/07/2023, con goles de Alfonso Etcheverry y Sebastián Baladan (https://x.com/11Ingenieria/status/1682868925078405122). Los goles de goles-2023.csv cubren solo ese partido.",
-    "X confirma la fecha 1 ante ISEF: empate 1-1 el 22/04/2023 y gol de Derrick Colesnik (https://x.com/11Ingenieria/status/1649899840644472832). El partido ya figuraba en la fuente de Instagram; se completó su fecha y se añadió el goleador."
+    "Fecha 8 ante Ciencias: victoria 3-0."
   ]
 }

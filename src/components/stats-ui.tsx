@@ -77,7 +77,7 @@ export function TablaPosiciones({ filas, resaltar, compacta }: { filas: FilaTabl
               <td className="px-2 py-2 text-right">{f.e}</td>
               <td className="px-2 py-2 text-right">{f.p}</td>
               <td className="px-2 py-2 text-right">
-                {f.gf === null ? "—" : `${f.gf}:${f.gc}`}
+                {f.gf === null || f.gc === null ? null : `${f.gf}:${f.gc}`}
               </td>
               {!compacta && <td className="px-2 py-2 text-right">{f.dif > 0 ? `+${f.dif}` : f.dif}</td>}
               <td className="px-3 py-2 text-right">{f.pts}</td>

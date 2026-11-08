@@ -72,9 +72,7 @@ export function LineaDeTiempo() {
                           <div className="font-medium">{r.titulo}</div>
                           {r.detalle && <div className="text-xs text-dim">{r.detalle.replace(/[A-ZÁÉÍÓÚ]{3,}/g, (m) => nombreEquipo(m))}</div>}
                         </>
-                      ) : (
-                        <span className="text-dim">—</span>
-                      )}
+                      ) : null}
                     </td>
                   );
                 })}

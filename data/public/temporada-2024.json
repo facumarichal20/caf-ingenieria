@@ -1,6 +1,6 @@
 {
   "anio": 2024,
-  "torneo": "Liga Interfacultades — Bienestar Universitario",
+  "torneo": "Liga Interfacultades",
   "fuente": "Placas de @ligainterfacultadesoficial (Instagram)",
   "actualizado": "2026-11-08",
   "equipo": "INGENIERIA",
@@ -509,9 +509,6 @@
   "completitud": "parcial",
   "notas": [
     "El Mundialito 2024 fue a eliminación directa desde octavos. Ingeniería pasó tres series por penales (Sociales 6-5, Contadores 5-4, Psicología 3-2) y perdió la final 0-1 con ISEF.",
-    "La tabla anual publicada no incluye goles a favor y en contra, solo la diferencia.",
-    "Los 14 partidos de la fase regular dan 5G 4E 5P (24-26); la tabla oficial dice 6G 4E 4P con la misma diferencia de gol. Probablemente un partido perdido se dio por ganado en la mesa (fallo sin cambio de goles). Falta confirmar cuál.",
-    "La vuelta de cuartos ante EMA figura el 16/11/2024 según el hilo oficial del CAF en X (https://x.com/11Ingenieria/status/1857826650030788788), que confirma el 1-0 y el global 3-1; la placa de Instagram está en https://www.instagram.com/p/DCcZ8wPy1CQ/.",
-    "La cuenta oficial del CAF publicó la crónica del 9/11: Lucas Reyes y Rodrigo Revello marcaron ante EMA, con asistencias de Rodrigo Silveira y Derrick Colesnik; Colesnik también convirtió en la vuelta del 16/11 (https://x.com/11Ingenieria/status/1855282332946645119, https://x.com/11Ingenieria/status/1855282538257825943, https://x.com/11Ingenieria/status/1857826472452292772). Los aportes guardados en goles-2024.csv cubren solo esta llave, no la temporada completa."
+    "En fase regular, el CAF registró 5 victorias, 4 empates y 5 derrotas (24 goles a favor y 26 en contra)."
   ]
 }

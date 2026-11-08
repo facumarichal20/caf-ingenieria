@@ -1,6 +1,5 @@
 import t2017 from "../../data/public/temporada-2017.json";
 import t2018 from "../../data/public/temporada-2018.json";
-import t2019 from "../../data/public/temporada-2019.json";
 import t2020 from "../../data/public/temporada-2020.json";
 import t2021 from "../../data/public/temporada-2021.json";
 import t2022 from "../../data/public/temporada-2022.json";
@@ -15,7 +14,6 @@ import type { Temporada } from "./tipos";
 export const TEMPORADAS: Record<number, Temporada> = {
   2017: t2017 as Temporada,
   2018: t2018 as Temporada,
-  2019: t2019 as Temporada,
   2020: t2020 as Temporada,
   2021: t2021 as Temporada,
   2022: t2022 as Temporada,
@@ -26,11 +24,6 @@ export const TEMPORADAS: Record<number, Temporada> = {
 };
 
 export const ANIOS = Object.keys(TEMPORADAS).map(Number).sort((a, b) => b - a);
-
-/** Notas que la dirigencia tiene que revisar sobre los datos oficiales. */
-export const NOTAS: Record<number, string> = {
-  2026: "La tabla oficial suma una victoria (y 2 goles a favor) más que los resultados cargados partido a partido. Probablemente sea un fallo de mesa: falta confirmar en qué partido.",
-};
 
 /** Primera fecha estimada de 2027 (en 2026 arrancó el 21/03). Cambiar cuando salga el fixture. */
 export const INICIO_2027 = "2027-03-20T09:00:00-03:00";

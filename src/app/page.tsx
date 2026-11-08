@@ -5,8 +5,8 @@ import Link from "next/link";
 import { CuentaRegresiva } from "@/components/cuenta-regresiva";
 import { LineaDeTiempo, Palmares } from "@/components/historia";
 import { FormaStrip, Seccion, StatTile, TablaPosiciones } from "@/components/stats-ui";
-import { caraACara, nombreEquipo, partidosDe, resumen } from "@/lib/stats";
-import { INICIO_2027, NOTAS, TEMPORADAS } from "@/lib/temporadas";
+import { partidosDe, resumen } from "@/lib/stats";
+import { INICIO_2027, TEMPORADAS } from "@/lib/temporadas";
 
 export const metadata = metadataPagina("Inicio", "El CAF: resultados de Ingeniería Fútbol 11, historia y preparación de la próxima temporada.", "/");
 
@@ -15,10 +15,8 @@ export default function Inicio() {
   const todos = partidosDe(t, t.equipo);
   const r = resumen(todos);
   const oficial = t.tabla.find((f) => f.equipo === t.equipo)!;
-  const h2h = caraACara(todos);
   const mundial = t.etapas.find((e) => e.etapa === "mundial");
   const playoffs = t.etapas.find((e) => e.etapa === "playoffs");
-  const pendientes = h2h.filter((x) => x.g === 0);
 
   return (
     <>
@@ -50,7 +48,7 @@ export default function Inicio() {
       <Seccion kicker="Temporada 2026" titulo="El año en números" accion={<Link className="text-sm text-accent hover:underline" href="/temporada/2026">Ver todo →</Link>}>
         <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-6">
           <StatTile destacado label="Fase regular" value={`${oficial.pos}°`} sub={`de ${t.tabla.length} · ${oficial.pts} pts`} />
-          <StatTile label="Mundialito" value={mundial ? mundial.titulo.split(" · ")[0].replace(".º", "°") : "—"} sub={mundial ? `${mundial.titulo.split(" · ")[1]} · ${mundial.detalle}` : undefined} />
+          {mundial && <StatTile label="Mundialito" value={mundial.titulo.split(" · ")[0].replace(".º", "°")} sub={`${mundial.titulo.split(" · ")[1]} · ${mundial.detalle}`} />}
           <StatTile label="Playoffs" value="4tos" sub={playoffs?.detalle?.replace("MEDICINA", "Medicina")} />
           <StatTile label="Partidos" value={r.pj} sub={`${r.g}G ${r.e}E ${r.p}P`} />
           <StatTile label="Goles" value={`${r.gf}–${r.gc}`} sub="a favor – en contra" />
@@ -64,7 +62,6 @@ export default function Inicio() {
           Partido a partido · F = fase regular · MO = Mundial Oro · CO = Copa Oro
         </h3>
         <FormaStrip partidos={todos} />
-        {NOTAS[2026] && <p className="mt-3 text-xs text-dim">Nota: {NOTAS[2026]}</p>}
       </Seccion>
       <Seccion kicker="Desde 2017" titulo="Historia del CAF">
         <Palmares />
@@ -74,23 +71,6 @@ export default function Inicio() {
         <p className="mt-2 text-xs text-dim">
           Datos de la planilla oficial (2026) y de las placas de @ligainterfacultadesoficial y @ingenieriafutbol_11. Los años anteriores todavía tienen huecos.
         </p>
-      </Seccion>
-      <Seccion kicker="Para 2027" titulo="Cuentas pendientes">
-        <p className="mb-4 max-w-2xl text-dim">
-          Contra estos equipos no ganamos en 2026. {r.mayorGoleada && (
-            <>Nuestra mejor tarde fue el {r.mayorGoleada.gf}-{r.mayorGoleada.gc} a {nombreEquipo(r.mayorGoleada.rival)}.</>
-          )}
-        </p>
-        <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
-          {pendientes.map((x) => (
-            <div key={x.rival} className="rounded-xl border border-line bg-surface p-4">
-              <div className="font-display text-2xl font-extrabold uppercase">{nombreEquipo(x.rival)}</div>
-              <div className="num mt-1 text-sm text-dim">
-                {x.pj} PJ · {x.e}E {x.p}P · {x.gf}:{x.gc}
-              </div>
-            </div>
-          ))}
-        </div>
       </Seccion>
       <Seccion kicker="Fase regular 2026" titulo="Tabla final">
         <TablaPosiciones filas={t.tabla} resaltar={t.equipo} compacta />

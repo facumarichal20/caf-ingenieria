@@ -63,7 +63,7 @@ function cargar(anio: number) {
   const m: Partial<Temporada> = existsSync(meta) ? JSON.parse(readFileSync(meta, "utf8")) : {};
   const t: Temporada = {
     anio,
-    torneo: "Liga Interfacultades — Bienestar Universitario",
+    torneo: "Liga Interfacultades",
     fuente: m.fuente ?? "Carga manual (placas y notas)",
     actualizado: new Date().toISOString().slice(0, 10),
     equipo: EQUIPO,

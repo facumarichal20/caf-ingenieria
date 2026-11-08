@@ -86,21 +86,6 @@ export function resumen(ps: PartidoEquipo[]): Resumen {
   return r;
 }
 
-export function caraACara(ps: PartidoEquipo[]): { rival: string; pj: number; g: number; e: number; p: number; gf: number; gc: number }[] {
-  const m = new Map<string, { rival: string; pj: number; g: number; e: number; p: number; gf: number; gc: number }>();
-  for (const x of ps) {
-    const c = m.get(x.rival) ?? { rival: x.rival, pj: 0, g: 0, e: 0, p: 0, gf: 0, gc: 0 };
-    c.pj++;
-    c.gf += x.gf;
-    c.gc += x.gc;
-    if (x.resultado === "G") c.g++;
-    else if (x.resultado === "E") c.e++;
-    else c.p++;
-    m.set(x.rival, c);
-  }
-  return [...m.values()].sort((a, b) => b.g - b.p - (a.g - a.p) || b.gf - b.gc - (a.gf - a.gc));
-}
-
 /** "INGENIERIA" → "Ingeniería" */
 const NOMBRES: Record<string, string> = {
   INGENIERIA: "Ingeniería", PSICOLOGIA: "Psicología", QUIMICA: "Química", NUTRICION: "Nutrición",

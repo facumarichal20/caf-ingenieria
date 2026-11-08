@@ -1,5 +1,5 @@
 // Estadísticas de todas las temporadas juntas (2017 en adelante).
-import { caraACara, partidosDe, resumen, type PartidoEquipo, type Resumen } from "./stats";
+import { partidosDe, resumen, type PartidoEquipo, type Resumen } from "./stats";
 import type { Etapa, Temporada } from "./tipos";
 
 export interface PartidoHistorico extends PartidoEquipo {
@@ -82,10 +82,3 @@ function masReciente<T>(xs: T[], valor: (x: T) => number): T | null {
   return mejor;
 }
 
-export function caraACaraHistorico(ts: Temporada[]) {
-  const ps = partidosHistoricos(ts);
-  return caraACara(ps).map((c) => {
-    const ultimo = ps.filter((x) => x.rival === c.rival).at(-1)!;
-    return { ...c, ultimo };
-  });
-}
