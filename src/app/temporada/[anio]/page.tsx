@@ -2,7 +2,7 @@ import { metadataPagina } from "@/lib/metadata";
 import clsx from "clsx";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { InsigniaEquipo, Marcador, Seccion, StatTile, TablaPosiciones } from "@/components/stats-ui";
+import { Marcador, Seccion, StatTile, TablaPosiciones } from "@/components/stats-ui";
 import { nombreEquipo, partidosDe, resumen, tablaDe, type PartidoEquipo } from "@/lib/stats";
 import { ANIOS, TEMPORADAS } from "@/lib/temporadas";
 import { ETAPA_DE, ETAPAS, NOMBRE_COMPETENCIA, type Etapa, type Partido } from "@/lib/tipos";
@@ -45,7 +45,7 @@ function TablaPartidos({ ps }: { ps: PartidoEquipo[] }) {
               <td className="num px-3 py-2 text-dim">{etiquetaInstancia(x.partido)}</td>
               <td className="num px-3 py-2 text-dim">{fmtFecha(x.partido.fecha)}</td>
               <td className="px-3 py-2">
-                <span className="flex items-center gap-2"><InsigniaEquipo equipo={x.rival} /><span><span className="text-dim">vs</span> {nombreEquipo(x.rival)}</span></span>
+                <span><span className="text-dim">vs</span> {nombreEquipo(x.rival)}</span>
               </td>
               <td className="px-3 py-2 text-center">
                 <span
@@ -54,7 +54,7 @@ function TablaPartidos({ ps }: { ps: PartidoEquipo[] }) {
                     x.resultado === "G" ? "bg-win" : x.resultado === "E" ? "bg-draw" : "bg-loss",
                   )}
                 >
-                  <Marcador local={x.gf} visitante={x.gc} />
+                  <Marcador local={x.gf} visitante={x.gc} localEquipo="INGENIERIA" visitanteEquipo={x.rival} />
                 </span>
                 {x.partido.penales && <span className="ml-2 text-xs text-dim">pen. {/^\d+-\d+$/.test(x.partido.penales) ? x.partido.penales : ""}</span>}
               </td>

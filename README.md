@@ -49,6 +49,9 @@ npm run build
 ## Postales
 
 Organizá las fotos originales en `public/postales/<año>/<fecha-y-datos-del-partido>/`. Por ejemplo, `public/postales/2024/2024-07-27-final-mundialito-isef/01.jpg`. Ejecutá `npm run postales:optimizar` para generar WebP, miniaturas y `data/postales.json`. La galería muestra «Postales próximamente» mientras no haya fotos.
+## Escudos de rivales
+
+`data/equipos.json` reúne a los rivales de las temporadas públicas. Guardá sus imágenes en `public/escudos/` con el nombre del equipo y ejecutá `npm run escudos:optimizar` para crear los archivos WebP transparentes de 256 × 256 px. Si un escudo no está disponible, la web muestra las iniciales del equipo.
 ## Stack
 
 Next.js 16 (App Router) · TypeScript · Tailwind CSS 4 · Supabase (base, login y permisos; pendiente de conectar) · Vercel (hosting gratis).

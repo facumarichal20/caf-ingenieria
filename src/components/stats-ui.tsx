@@ -1,6 +1,7 @@
 import clsx from "clsx";
 import { nombreEquipo, type PartidoEquipo } from "@/lib/stats";
 import type { FilaTabla, Partido } from "@/lib/tipos";
+import { Escudo } from "@/components/escudo";
 
 export function StatTile({ label, value, sub, destacado }: { label: string; value: React.ReactNode; sub?: React.ReactNode; destacado?: boolean }) {
   return (
@@ -12,21 +13,18 @@ export function StatTile({ label, value, sub, destacado }: { label: string; valu
   );
 }
 
-export function Marcador({ local, visitante, compacto = false, className }: { local: number; visitante: number; compacto?: boolean; className?: string }) {
+export function Marcador({ local, visitante, compacto = false, className, localEquipo, visitanteEquipo }: { local: number; visitante: number; compacto?: boolean; className?: string; localEquipo?: string; visitanteEquipo?: string }) {
   return (
-    <span role="img" className={clsx("marcador inline-block font-bold", compacto ? "text-xl" : "text-3xl", className)} aria-label={`Resultado: ${local} a ${visitante}`}>
-      {local}–{visitante}
+    <span className={clsx("marcador inline-flex items-center justify-center gap-1.5 font-bold", compacto ? "text-xl" : "text-3xl", className)} aria-label={`Resultado: ${local} a ${visitante}`}>
+      {localEquipo && <Escudo equipo={localEquipo} size={compacto ? 22 : 28} />}
+      <span>{local}–{visitante}</span>
+      {visitanteEquipo && <Escudo equipo={visitanteEquipo} size={compacto ? 22 : 28} />}
     </span>
   );
 }
 
-function siglaEquipo(equipo: string) {
-  const palabras = equipo.normalize("NFD").replace(/\p{Diacritic}/gu, "").split(/[\s/-]+/).filter(Boolean);
-  return palabras.length > 1 ? palabras.slice(0, 2).map((p) => p[0]).join("").toUpperCase() : (palabras[0] ?? "").slice(0, 3).toUpperCase();
-}
-
 export function InsigniaEquipo({ equipo }: { equipo: string }) {
-  return <span className="insignia-equipo" aria-hidden="true">{siglaEquipo(nombreEquipo(equipo))}</span>;
+  return <Escudo equipo={equipo} size={28} />;
 }
 
 const COLOR = { G: "bg-win text-tinta", E: "bg-draw text-tinta", P: "bg-loss text-tinta" } as const;
@@ -51,11 +49,8 @@ export function FormaStrip({ partidos }: { partidos: PartidoEquipo[] }) {
             <span>{etiquetaCorta(x.partido)}</span>
           </div>
           <div className="px-2 py-1.5">
-            <Marcador local={x.gf} visitante={x.gc} compacto />
-            <div className="mt-1 flex items-center gap-1.5 truncate text-xs text-dim" title={nombreEquipo(x.rival)}>
-              <InsigniaEquipo equipo={x.rival} />
-              <span>vs {nombreEquipo(x.rival)}</span>
-            </div>
+            <Marcador local={x.gf} visitante={x.gc} compacto localEquipo="INGENIERIA" visitanteEquipo={x.rival} />
+            <div className="mt-1 truncate text-xs text-dim" title={nombreEquipo(x.rival)}>vs {nombreEquipo(x.rival)}</div>
           </div>
         </li>
       ))}
@@ -84,10 +79,7 @@ export function TablaPosiciones({ filas, resaltar, compacta }: { filas: FilaTabl
           {filas.map((f) => (
             <tr key={f.equipo} className={clsx("border-t border-line", f.equipo === resaltar && "bg-accent/15 font-semibold")}>
               <td className="px-3 py-2">{f.pos}</td>
-              <td className="px-3 py-2 font-sans">
-                {f.equipo === resaltar && <span className="mr-1.5 inline-block h-2 w-2 rounded-full bg-accent align-middle" />}
-                {nombreEquipo(f.equipo)}
-              </td>
+              <td className="px-3 py-2 font-sans"><span className="flex items-center gap-2"><Escudo equipo={f.equipo} size={26} /><span>{nombreEquipo(f.equipo)}</span></span></td>
               <td className="px-2 py-2 text-right">{f.pj}</td>
               <td className="px-2 py-2 text-right">{f.g}</td>
               <td className="px-2 py-2 text-right">{f.e}</td>
