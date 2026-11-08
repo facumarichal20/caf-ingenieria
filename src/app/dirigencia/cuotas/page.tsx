@@ -1,0 +1,8 @@
+import { CabeceraPagina, Seccion, StatTile } from "@/components/stats-ui";
+import { CopiarRecordatorio } from "@/components/copiar-recordatorio";
+import { CUOTAS, deuda } from "@/lib/gestion";
+export const metadata={title:"Cuotas",description:"Control de cuotas del CAF.",robots:{index:false,follow:false}};
+export default function Cuotas(){
+ const jugadores=[...new Set(CUOTAS.map(c=>c.jugador))];
+ return <><CabeceraPagina titulo="Cuotas" kicker="Dirigencia · Demostración" descripcion="Datos inventados. La gestión de cuotas reales requiere una cuenta de dirigencia."/><Seccion titulo="Estado de cobro"><StatTile label="Pendiente de ejemplo" value={`$ ${deuda(CUOTAS)}`}/><div className="mt-4 overflow-x-auto"><table className="w-full text-sm"><thead><tr><th className="p-3 text-left">Jugador</th>{Array.from({length:12},(_,i)=><th key={i} className="p-3">{i+1}</th>)}</tr></thead><tbody>{jugadores.map(j=><tr key={j} className="border-t border-line"><th className="p-3 text-left">{j}</th>{Array.from({length:12},(_,i)=>{const c=CUOTAS.find(c=>c.jugador===j&&c.mes===i+1);return <td key={i} className="p-3">{c ? c.pagado>=c.monto ? "Pagó" : `Debe $ ${c.monto-c.pagado}` : "—"}</td>})}</tr>)}</tbody></table></div></Seccion><Seccion titulo="Cuotas pendientes">{jugadores.filter(j=>deuda(CUOTAS.filter(c=>c.jugador===j))>0).map(j=><div key={j} className="mb-4 rounded-xl border border-line p-4"><h3>{j} · $ {deuda(CUOTAS.filter(c=>c.jugador===j))}</h3><CopiarRecordatorio texto={`¡Buenas! Te recordamos que tenés $ ${deuda(CUOTAS.filter(c=>c.jugador===j))} de cuotas pendientes del CAF. Cuando puedas, coordiná el pago con la dirigencia. ¡Gracias!`}/></div>)}</Seccion></>;
+}

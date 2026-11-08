@@ -1,14 +1,17 @@
+import { metadataPagina } from "@/lib/metadata";
 import Link from "next/link";
 import { BadgeCheck, Calculator, Camera, HeartPulse, PiggyBank, Users } from "lucide-react";
 
-export const metadata = { title: "Dirigencia" };
+export const metadata = { ...metadataPagina("Dirigencia", "Herramientas del CAF para organizar la temporada.", ""), robots: { index: false, follow: false } };
 
 const MODULOS = [
+  { href: "/dirigencia/cuotas", icon: PiggyBank, titulo: "Cuotas", texto: "Grilla mensual y recordatorios de pago.", listo: true },
+  { href: "/dirigencia/convocatoria", icon: Users, titulo: "Convocatoria", texto: "Lista de ejemplo con control de habilitaciones.", listo: true },
   { href: "/dirigencia/carnes", icon: HeartPulse, titulo: "Fichajes y carné de salud", texto: "Quién está habilitado, qué carné vence y cuándo.", listo: true },
   { href: "/dirigencia/presupuesto", icon: Calculator, titulo: "Planificador 2027", texto: "Canchas, jueces y gastos fijos: cuánto hay que juntar por mes y la cuota necesaria.", listo: true },
-  { href: "#", icon: PiggyBank, titulo: "Finanzas y cuotas", texto: "Caja, ingresos y egresos, quién pagó cada mes.", listo: false },
+  { href: "/dirigencia/finanzas", icon: PiggyBank, titulo: "Finanzas y cuotas", texto: "Caja de ejemplo, ingresos y egresos.", listo: true },
   { href: "#", icon: BadgeCheck, titulo: "Beneficios", texto: "Rifas, fiestas y sponsors con meta y avance.", listo: false },
-  { href: "#", icon: Camera, titulo: "Placas para Instagram", texto: "Resultado, convocatoria, goleador y cumpleaños, listas para subir.", listo: false },
+  { href: "/dirigencia/placas", icon: Camera, titulo: "Placas para Instagram", texto: "Resultado, convocatoria, goleador y cumpleaños, listas para subir.", listo: true },
   { href: "#", icon: Users, titulo: "Usuarios y roles", texto: "Quién es jugador, DT o dirigente.", listo: false },
 ];
 

@@ -1,3 +1,5 @@
+import { Redes } from "@/components/redes";
+import { metadataPagina } from "@/lib/metadata";
 import Image from "next/image";
 import Link from "next/link";
 import { CuentaRegresiva } from "@/components/cuenta-regresiva";
@@ -5,6 +7,8 @@ import { LineaDeTiempo, Palmares } from "@/components/historia";
 import { FormaStrip, Seccion, StatTile, TablaPosiciones } from "@/components/stats-ui";
 import { caraACara, nombreEquipo, partidosDe, resumen } from "@/lib/stats";
 import { INICIO_2027, NOTAS, TEMPORADAS } from "@/lib/temporadas";
+
+export const metadata = metadataPagina("Inicio", "El CAF: resultados de Ingeniería Fútbol 11, historia y preparación de la próxima temporada.", "/");
 
 export default function Inicio() {
   const t = TEMPORADAS[2026];
@@ -18,7 +22,6 @@ export default function Inicio() {
 
   return (
     <>
-      {/* HERO */}
       <section className="relative overflow-hidden border-b border-line">
         <div className="bastones corte-diagonal absolute inset-y-0 right-0 hidden w-[42%] opacity-90 md:block" aria-hidden />
         <div className="relative mx-auto grid max-w-6xl gap-10 px-4 py-14 md:grid-cols-[1.2fr_1fr] md:py-20">
@@ -44,8 +47,6 @@ export default function Inicio() {
           </div>
         </div>
       </section>
-
-      {/* 2026 EN NÚMEROS */}
       <Seccion kicker="Temporada 2026" titulo="El año en números" accion={<Link className="text-sm text-accent hover:underline" href="/temporada/2026">Ver todo →</Link>}>
         <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-6">
           <StatTile destacado label="Fase regular" value={`${oficial.pos}°`} sub={`de ${t.tabla.length} · ${oficial.pts} pts`} />
@@ -65,8 +66,6 @@ export default function Inicio() {
         <FormaStrip partidos={todos} />
         {NOTAS[2026] && <p className="mt-3 text-xs text-dim">Nota: {NOTAS[2026]}</p>}
       </Seccion>
-
-      {/* HISTORIA */}
       <Seccion kicker="Desde 2017" titulo="Historia del CAF">
         <Palmares />
         <div className="mt-6">
@@ -76,8 +75,6 @@ export default function Inicio() {
           Datos de la planilla oficial (2026) y de las placas de @ligainterfacultadesoficial y @ingenieriafutbol_11. Los años anteriores todavía tienen huecos.
         </p>
       </Seccion>
-
-      {/* CARA A CARA */}
       <Seccion kicker="Para 2027" titulo="Cuentas pendientes">
         <p className="mb-4 max-w-2xl text-dim">
           Contra estos equipos no ganamos en 2026. {r.mayorGoleada && (
@@ -95,11 +92,10 @@ export default function Inicio() {
           ))}
         </div>
       </Seccion>
-
-      {/* TABLA */}
       <Seccion kicker="Fase regular 2026" titulo="Tabla final">
         <TablaPosiciones filas={t.tabla} resaltar={t.equipo} compacta />
       </Seccion>
+      <Seccion titulo="Seguinos" kicker="El CAF en redes"><Redes /></Seccion>
     </>
   );
 }

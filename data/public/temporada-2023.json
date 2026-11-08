@@ -2,7 +2,7 @@
   "anio": 2023,
   "torneo": "Liga Interfacultades — Bienestar Universitario",
   "fuente": "Placas de @ligainterfacultadesoficial (Instagram) y nota de Bienestar Universitario del 15/05/2023",
-  "actualizado": "2026-11-07",
+  "actualizado": "2026-11-08",
   "equipo": "INGENIERIA",
   "partidos": [
     {
@@ -10,7 +10,7 @@
       "instancia": "fecha",
       "fecha_nro": 1,
       "grupo": null,
-      "fecha": null,
+      "fecha": "2023-04-22",
       "cancha": null,
       "local": "INGENIERIA",
       "visitante": "ISEF",
@@ -120,6 +120,19 @@
       "visitante": "CONTADORES",
       "goles_local": 2,
       "goles_visitante": 2,
+      "penales": null
+    },
+    {
+      "competencia": "fase-regular",
+      "instancia": "fecha",
+      "fecha_nro": 12,
+      "grupo": null,
+      "fecha": "2023-07-22",
+      "cancha": null,
+      "local": "INGENIERIA",
+      "visitante": "NUTRICION",
+      "goles_local": 2,
+      "goles_visitante": 1,
       "penales": null
     },
     {
@@ -423,6 +436,8 @@
     "2023 no tuvo Mundialito: el formato fue fase regular de 17 fechas y playoffs.",
     "Medicina le ganó la final de la Copa Oro a ISEF; Contadores la de Plata a FIC.",
     "Fecha 8 contra Ciencias: el CAF se quedó con el partido en la mesa por irregularidades en el plantel rival (se carga 3-0).",
-    "Faltan las fechas 11, 12, 13 y 15: según el CAF fueron victorias en la 11, 12 y 15 (la 15 dándolo vuelta para meterse en la Copa Oro), pero no se publicó rival y marcador completo. La 10 fue fecha libre."
+    "Faltan las fechas 11, 13 y 15: según el CAF fueron victorias en las fechas 11 y 15 (la 15 dándolo vuelta para meterse en la Copa Oro), pero no se publicó rival y marcador completo. La fecha 12 ante Nutrición se cargó con el resultado y la fecha confirmados en X. La 10 fue fecha libre.",
+    "X confirma la fecha 12 ante Nutrición: victoria 2-1 el 22/07/2023, con goles de Alfonso Etcheverry y Sebastián Baladan (https://x.com/11Ingenieria/status/1682868925078405122). Los goles de goles-2023.csv cubren solo ese partido.",
+    "X confirma la fecha 1 ante ISEF: empate 1-1 el 22/04/2023 y gol de Derrick Colesnik (https://x.com/11Ingenieria/status/1649899840644472832). El partido ya figuraba en la fuente de Instagram; se completó su fecha y se añadió el goleador."
   ]
 }

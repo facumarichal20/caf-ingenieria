@@ -6,6 +6,7 @@ export interface JugadorPlantel {
   apodo: string;
   posicion: string;
   dorsal: string;
+  foto?: string;
 }
 
 /** CSV con comas, campos entre comillas y comillas escapadas. */
@@ -39,7 +40,7 @@ export function parsearPlantel(texto: string): JugadorPlantel[] {
   }
   return datos.map((f) => {
     const valor = (c: string) => f[columnas.indexOf(c)] ?? "";
-    return { nombre: valor("nombre"), apodo: valor("apodo"), posicion: valor("posicion"), dorsal: valor("dorsal") };
+    return { nombre: valor("nombre"), apodo: valor("apodo"), posicion: valor("posicion"), dorsal: valor("dorsal"), ...(valor("foto") ? { foto: valor("foto") } : {}) };
   }).filter((j) => j.nombre);
 }
 

@@ -34,7 +34,6 @@ function orden(p: Partido): number {
   return ORDEN_COMP[p.competencia] * 10000 + ORDEN_INST[p.instancia] * 100 + (p.fecha_nro ?? 0);
 }
 
-/** Tabla de posiciones calculada a partir de partidos (para series del Mundialito). */
 export function tablaDe(ps: Partido[]): FilaTabla[] {
   const m = new Map<string, FilaTabla>();
   const fila = (e: string) => m.get(e) ?? m.set(e, { pos: 0, equipo: e, pj: 0, g: 0, e: 0, p: 0, gf: 0, gc: 0, dif: 0, pts: 0 }).get(e)!;
@@ -87,7 +86,6 @@ export function resumen(ps: PartidoEquipo[]): Resumen {
   return r;
 }
 
-/** Historial contra cada rival (para "cara a cara"). */
 export function caraACara(ps: PartidoEquipo[]): { rival: string; pj: number; g: number; e: number; p: number; gf: number; gc: number }[] {
   const m = new Map<string, { rival: string; pj: number; g: number; e: number; p: number; gf: number; gc: number }>();
   for (const x of ps) {

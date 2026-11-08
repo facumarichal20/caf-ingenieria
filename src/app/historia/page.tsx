@@ -1,4 +1,5 @@
-import type { Metadata } from "next";
+import { metadataPagina } from "@/lib/metadata";
+
 import Link from "next/link";
 import { LineaDeTiempo, Palmares } from "@/components/historia";
 import { Seccion, StatTile } from "@/components/stats-ui";
@@ -6,7 +7,7 @@ import { caraACaraHistorico, records, resumenPorAnio, type PartidoHistorico } fr
 import { nombreEquipo } from "@/lib/stats";
 import { NOTAS, TEMPORADAS } from "@/lib/temporadas";
 
-export const metadata: Metadata = { title: "Historia" };
+export const metadata = { ...metadataPagina("Historia", "Récords, temporadas y cara a cara del CAF en la Liga Interfacultades.", "/historia") };
 
 function detalle(p: PartidoHistorico | null) {
   return p ? `vs ${nombreEquipo(p.rival)} · ${p.anio}` : "Sin partidos registrados";

@@ -16,7 +16,6 @@ export interface AnioResumen {
   etapas: Partial<Record<Etapa, string>>;
 }
 
-/** Todos los partidos de Ingeniería, del más viejo al más nuevo. */
 export function partidosHistoricos(ts: Temporada[]): PartidoHistorico[] {
   return [...ts]
     .sort((a, b) => a.anio - b.anio)
@@ -83,7 +82,6 @@ function masReciente<T>(xs: T[], valor: (x: T) => number): T | null {
   return mejor;
 }
 
-/** Cara a cara de todos los años, con el último partido contra cada rival. */
 export function caraACaraHistorico(ts: Temporada[]) {
   const ps = partidosHistoricos(ts);
   return caraACara(ps).map((c) => {

@@ -8,6 +8,7 @@ const sans = IBM_Plex_Sans({ variable: "--font-plex-sans", subsets: ["latin"], w
 const mono = IBM_Plex_Mono({ variable: "--font-plex-mono", subsets: ["latin"], weight: ["400", "600"] });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://caf-ingenieria.vercel.app"),
   title: { default: "CAF · Ingeniería Fútbol 11", template: "%s · CAF" },
   description: "Estadísticas, temporada y gestión del cuadro de fútbol 11 de la Facultad de Ingeniería en la Liga Interfacultades.",
   icons: { icon: "/brand/escudo.png" },
@@ -19,8 +20,9 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html lang="es-UY">
       <body className={`${display.variable} ${sans.variable} ${mono.variable} min-h-dvh flex flex-col`}>
+        <a href="#contenido" className="salto-contenido">Saltar al contenido</a>
         <SiteHeader />
-        <main className="flex-1">{children}</main>
+        <main id="contenido" className="min-w-0 flex-1">{children}</main>
         <SiteFooter />
       </body>
     </html>

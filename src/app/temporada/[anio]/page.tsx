@@ -1,3 +1,4 @@
+import { metadataPagina } from "@/lib/metadata";
 import clsx from "clsx";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -11,7 +12,8 @@ export function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ anio: string }> }) {
-  return { title: `Temporada ${(await params).anio}` };
+  const { anio } = await params;
+  return metadataPagina(`Temporada ${anio}`, `Resultados, tabla y etapas del CAF en la temporada ${anio}.`, `/temporada/${anio}`);
 }
 
 const fmtFecha = (iso: string | null) =>
@@ -178,7 +180,7 @@ export default async function TemporadaPage({ params }: { params: Promise<{ anio
         <Seccion kicker={String(anio)} titulo="Notas">
           <ul className="grid gap-2 text-sm text-dim">
             {t.notas.map((n) => (
-              <li key={n} className="rounded-lg border border-line bg-surface px-4 py-3">
+              <li key={n} className="min-w-0 break-words rounded-lg border border-line bg-surface px-4 py-3">
                 {n}
               </li>
             ))}

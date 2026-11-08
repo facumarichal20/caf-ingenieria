@@ -1,3 +1,4 @@
+import { metadataPagina } from "@/lib/metadata";
 import clsx from "clsx";
 import { StatTile } from "@/components/stats-ui";
 import { diasHasta, estadoCarne, vencimientosPorMes, type EstadoCarne } from "@/lib/carne";
@@ -5,7 +6,7 @@ import { cargarFichajes } from "@/lib/privado";
 import { INICIO_2027 } from "@/lib/temporadas";
 import { FiltroCarnes } from "./filtro";
 
-export const metadata = { title: "Carnés de salud", robots: { index: false } };
+export const metadata = { ...metadataPagina("Carnés de salud", "Control de habilitaciones del plantel del CAF.", ""), robots: { index: false, follow: false } };
 export const dynamic = "force-dynamic";
 
 const ETIQUETA: Record<EstadoCarne, string> = { vencido: "Vencido", "por-vencer": "Vence pronto", ok: "Vigente", "sin-dato": "Sin dato" };

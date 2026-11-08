@@ -1,4 +1,3 @@
-/** Semáforo del carné de salud. */
 export type EstadoCarne = "vencido" | "por-vencer" | "ok" | "sin-dato";
 
 export const DIAS_AVISO = 30;

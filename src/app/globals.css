@@ -39,19 +39,19 @@
     --text: var(--tinta);
     --text-dim: #6b6260;
     --line: #e2dad8;
-    --accent: #c4566a;
+    --accent: #9f344d;
     --accent-strong: #a8394f;
-    --win: #1f8a4c;
-    --draw: #6b6260;
-    --loss: #c0392b;
-    --warn: #a86b00;
+    --win: #8fd6a8;
+    --draw: #d9d4d2;
+    --loss: #f08a7e;
+    --warn: #f3c969;
     color-scheme: light;
   }
 }
 :root[data-theme="light"] {
   --bg: var(--papel); --surface: #fff; --surface-2: #efe9e8; --text: var(--tinta); --text-dim: #6b6260;
-  --line: #e2dad8; --accent: #c4566a; --accent-strong: #a8394f; --win: #1f8a4c; --draw: #6b6260;
-  --loss: #c0392b; --warn: #a86b00; color-scheme: light;
+  --line: #e2dad8; --accent: #9f344d; --accent-strong: #a8394f; --win: #8fd6a8; --draw: #d9d4d2;
+  --loss: #f08a7e; --warn: #f3c969; color-scheme: light;
 }
 
 @theme inline {
@@ -108,3 +108,18 @@ body {
 }
 
 :focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+h1, h2, h3, p, td, th { overflow-wrap: anywhere; }
+input, select, textarea { max-width: 100%; }
+input:not([type="checkbox"]):not([type="range"]), select, textarea {
+  border: 1px solid var(--line); border-radius: .5rem; background: var(--surface);
+  color: var(--text); padding: .65rem .75rem;
+}
+button, a, input, select, textarea { touch-action: manipulation; }
+.boton { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; border-radius: .5rem; padding: .65rem 1rem; background: var(--accent); color: var(--tinta); font-weight: 600; }
+@media (prefers-color-scheme: light) { :root:not([data-theme="dark"]) .boton { color: #fff; } }
+:root[data-theme="light"] .boton { color: #fff; }
+.boton:disabled { opacity: .5; cursor: not-allowed; }
+.salto-contenido { position: fixed; top: .5rem; left: .5rem; z-index: 100; padding: .75rem; background: var(--accent); color: var(--bg); transform: translateY(-200%); }
+.salto-contenido:focus { transform: translateY(0); }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; animation: none !important; transition: none !important; } }

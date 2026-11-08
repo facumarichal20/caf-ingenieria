@@ -24,7 +24,6 @@ export function etiquetaCorta(p: Partido): string {
   return `${copa} ${RONDA[p.instancia]}${p.fecha_nro ? (p.fecha_nro === 1 ? " ida" : " vta") : ""}`;
 }
 
-/** Tira de partidos tipo "forma reciente", uno por partido. */
 export function FormaStrip({ partidos }: { partidos: PartidoEquipo[] }) {
   return (
     <ol className="grid grid-cols-4 gap-2 sm:grid-cols-8">
@@ -92,8 +91,8 @@ export function TablaPosiciones({ filas, resaltar, compacta }: { filas: FilaTabl
 
 export function Seccion({ titulo, kicker, children, accion }: { titulo: string; kicker?: string; children: React.ReactNode; accion?: React.ReactNode }) {
   return (
-    <section className="mx-auto mt-14 max-w-6xl px-4">
-      <div className="mb-4 flex items-end gap-4">
+    <section className="mx-auto mt-10 min-w-0 max-w-6xl px-4 sm:mt-14">
+      <div className="mb-4 flex flex-wrap items-end gap-4">
         <div>
           {kicker && <div className="text-xs uppercase tracking-[0.2em] text-accent">{kicker}</div>}
           <h2 className="font-display text-3xl font-extrabold uppercase leading-none sm:text-4xl">{titulo}</h2>
@@ -103,4 +102,21 @@ export function Seccion({ titulo, kicker, children, accion }: { titulo: string; 
       {children}
     </section>
   );
+}
+
+export function CabeceraPagina({ titulo, descripcion, kicker = "Ingeniería Fútbol 11" }: { titulo: string; descripcion: string; kicker?: string }) {
+  return (
+    <header className="relative border-b border-line bg-surface">
+      <div className="mx-auto max-w-6xl px-4 py-10 sm:py-14">
+        <p className="text-xs uppercase tracking-[0.2em] text-accent">{kicker}</p>
+        <h1 className="mt-3 max-w-4xl font-display text-5xl font-black uppercase leading-none sm:text-7xl">{titulo}</h1>
+        <p className="mt-4 max-w-2xl text-dim">{descripcion}</p>
+      </div>
+      <div className="bastones-finos h-1" aria-hidden />
+    </header>
+  );
+}
+
+export function AvisoVacio({ children }: { children: React.ReactNode }) {
+  return <p role="status" className="rounded-xl border border-line bg-surface p-6 text-dim">{children}</p>;
 }

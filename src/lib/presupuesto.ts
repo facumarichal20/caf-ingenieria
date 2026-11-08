@@ -1,4 +1,3 @@
-/** Planificador de la temporada: cuánto cuesta el año y cuánta cuota hace falta. */
 
 export interface SupuestosTemporada {
   partidos: number; // oficiales del año (fase regular + playoffs)

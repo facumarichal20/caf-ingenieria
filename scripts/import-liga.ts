@@ -26,8 +26,6 @@ const hoja = (nombre: string): Fila[] => {
 };
 const num = (v: unknown): number | null => (typeof v === "number" && Number.isFinite(v) ? v : null);
 const str = (v: unknown): string => (typeof v === "string" ? v.trim() : "");
-
-// ---------- Fase regular ----------
 function faseRegular(): Partido[] {
   const out: Partido[] = [];
   let fechaNro = 1;
@@ -53,8 +51,6 @@ function faseRegular(): Partido[] {
   }
   return out;
 }
-
-// ---------- Playoffs: cuartos de final Copa Oro (ida y vuelta) ----------
 // Bloques de 3 filas: equipo A (col C, ida D, vuelta E), equipo B, fila de fechas "3/10/2026 c4 1110".
 function cuartos(): Partido[] {
   const rows = hoja("Playoffs");
@@ -81,8 +77,6 @@ function cuartos(): Partido[] {
   }
   return out;
 }
-
-// ---------- Tabla ----------
 function tabla(): FilaTabla[] {
   return hoja("Tabla")
     .filter((r) => num(r[0]) !== null && str(r[1]) && num(r[2]) !== null)
@@ -95,8 +89,6 @@ function tabla(): FilaTabla[] {
     // la hoja "Tabla" tiene muchas tablas debajo; la primera es la general
     .filter((f, i, arr) => arr.findIndex((x) => x.equipo === f.equipo) === i);
 }
-
-// ---------- Fichados de Ingeniería ----------
 function fichajes(): Fichaje[] {
   const rows = hoja("Jugadores");
   const ini = rows.findIndex((r) => str(r[0]).toUpperCase() === EQUIPO);
@@ -118,8 +110,6 @@ function fichajes(): Fichaje[] {
   }
   return out;
 }
-
-// ---------- Mundialito ----------
 // En la planilla los equipos van abreviados.
 const ABREV: Record<string, string> = {
   CON: "CONTADORES", CONT: "CONTADORES", ING: "INGENIERIA", IPA: "IPA", DER: "DERECHO", ODO: "ODONTOLOGIA",

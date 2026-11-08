@@ -6,15 +6,21 @@ const NAV = [
   { href: "/temporada/2026", label: "Temporadas", corto: "Temporadas" },
   { href: "/historia", label: "Historia", corto: "Historia" },
   { href: "/plantel", label: "Plantel", corto: "Plantel" },
+  { href: "/fixture", label: "Fixture 2027", corto: "Fixture" },
+  { href: "/noticias", label: "Noticias", corto: "Noticias" },
+  { href: "/galeria", label: "Galería", corto: "Galería" },
+  { href: "/club", label: "El club", corto: "El club" },
+  { href: "/apoyos", label: "Apoyos", corto: "Apoyos" },
+  { href: "/mi-equipo", label: "Mi equipo", corto: "Mi equipo" },
   { href: "/dirigencia", label: "Dirigencia", corto: "Dirigencia" },
 ];
 
 export function SiteHeader() {
   return (
-    <header className="sticky top-0 z-20 border-b border-line bg-bg/90 backdrop-blur">
+    <header className="relative z-20 border-b border-line bg-bg/90 backdrop-blur">
       <div className="mx-auto flex max-w-6xl flex-wrap items-center gap-3 px-4 py-3">
         <Link href="/" className="flex items-center gap-2.5" aria-label="CAF, inicio">
-          <Image src="/brand/escudo.png" alt="" width={30} height={35} priority />
+          <Image src="/brand/escudo.png" alt="" width={30} height={35} priority className="w-[30px]" style={{ height: "auto" }} />
           <span className="font-display text-2xl font-black uppercase leading-none tracking-wide">
             CAF <span className="hidden font-semibold text-dim sm:inline">· Ingeniería F11</span>
           </span>
@@ -28,6 +34,7 @@ export function SiteHeader() {
           ))}
         </nav>
       </div>
+      <div className="mx-auto flex max-w-6xl flex-wrap gap-4 px-4 pb-3 text-xs text-dim"><a href="https://www.instagram.com/ingenieriafutbol_11/">Instagram CAF</a><a href="https://www.facebook.com/ingenieriafutbol11/">Facebook CAF</a><a href="https://www.instagram.com/ligainterfacultadesoficial/">Instagram Liga</a></div>
       <div className="bastones-finos h-1" aria-hidden />
     </header>
   );
@@ -41,7 +48,7 @@ export function SiteFooter() {
         <a className="hover:text-text" href="https://www.instagram.com/ingenieriafutbol_11/" target="_blank" rel="noreferrer">
           Instagram @ingenieriafutbol_11
         </a>
-        <span className="ml-auto">Datos: planilla oficial de la Liga</span>
+        <a href="https://www.facebook.com/ingenieriafutbol11/">Facebook CAF</a><a href="https://www.instagram.com/ligainterfacultadesoficial/">Instagram Liga</a><span>Datos: Liga y publicaciones del CAF</span>
       </div>
     </footer>
   );

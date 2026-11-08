@@ -39,7 +39,6 @@ export function Palmares() {
   );
 }
 
-/** Una fila por temporada: cómo le fue en cada etapa. */
 export function LineaDeTiempo() {
   return (
     <div className="overflow-x-auto rounded-xl border border-line">

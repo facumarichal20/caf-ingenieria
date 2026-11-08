@@ -1,6 +1,7 @@
+import { metadataPagina } from "@/lib/metadata";
 import { PlanificadorCliente } from "./sin-ssr";
 
-export const metadata = { title: "Planificador 2027", robots: { index: false } };
+export const metadata = { ...metadataPagina("Planificador 2027", "Presupuesto de canchas, jueces y cuota del CAF para 2027.", ""), robots: { index: false, follow: false } };
 
 export default function Presupuesto() {
   return (

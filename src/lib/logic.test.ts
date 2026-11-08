@@ -139,8 +139,8 @@ describe("historia (todas las temporadas)", async () => {
     expect(partidosHistoricos(ts)[0].anio).toBe(2017);
   });
 
-  it("penales: 5 de 6 definiciones ganadas (2020 ×2, 2024 ×3; 2023 perdida con Derecho)", () => {
-    expect(records(ts).penales).toEqual({ jugadas: 6, ganadas: 5 });
+  it("penales: 6 de 8 definiciones ganadas, con la caída ante Contadores en 2025", () => {
+    expect(records(ts).penales).toEqual({ jugadas: 8, ganadas: 6 });
   });
 
   it("ganoPenales respeta el lado de Ingeniería", () => {

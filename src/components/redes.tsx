@@ -1,0 +1,2 @@
+import posts from "../../data/redes.json";
+export function Redes(){return <div className="grid gap-4 sm:grid-cols-2">{posts.map(p=><div key={p.url} className="rounded-xl border border-line bg-surface p-4"><h3 className="mb-3 font-display text-2xl">{p.titulo}</h3><iframe title={p.titulo} src={p.url+"embed/"} loading="lazy" className="h-[520px] w-full rounded-lg border-0" allow="encrypted-media"/><a className="text-accent" href={p.url}>Ver publicación en Instagram</a></div>)}</div>;}
