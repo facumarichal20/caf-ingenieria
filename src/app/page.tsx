@@ -25,23 +25,31 @@ export default function Inicio() {
 
   return (
     <>
-      <section className="relative overflow-hidden border-b border-line">
-        <div className="bastones corte-diagonal absolute inset-y-0 right-0 hidden w-[42%] opacity-90 md:block" aria-hidden="true" />
-        <div className="relative mx-auto grid max-w-6xl items-center gap-8 px-4 py-12 sm:py-16 md:grid-cols-[1.2fr_1fr] md:py-20">
-          <div>
-            <p className="text-xs uppercase tracking-[0.25em] text-accent">CAF · Selección de fútbol de la Facultad de Ingeniería, Udelar</p>
-            <h1 className="mt-3 font-display text-6xl font-black uppercase leading-[0.85] sm:text-8xl">Temporada<br />2027</h1>
-            <p className="mt-5 max-w-xl text-lg">
+      <section className="border-b border-line">
+        <div className="mx-auto grid max-w-[1440px] items-center gap-8 px-4 py-8 sm:gap-10 sm:py-12 md:grid-cols-[0.9fr_1.1fr] md:gap-12 md:px-8 md:py-14 lg:gap-16 lg:px-12">
+          <div className="order-1">
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">CAF · Selección de fútbol de la Facultad de Ingeniería, Udelar</p>
+            <h1 className="mt-4 font-display text-6xl font-black uppercase leading-[0.82] tracking-tight sm:text-8xl md:text-[clamp(3.5rem,8vw,7.5rem)]">Temporada<br />2027</h1>
+            <p className="mt-6 max-w-xl text-base leading-relaxed text-dim sm:text-lg">
               Representando a <a className="text-accent hover:underline" href="https://www.instagram.com/fingudelar/" target="_blank" rel="noreferrer">@fingudelar</a> en la <a className="text-accent hover:underline" href="https://www.instagram.com/ligainterfacultadesoficial/" target="_blank" rel="noreferrer">@ligainterfacultadesoficial</a> desde 2010.
             </p>
-            <div className="mt-7 flex flex-wrap items-center gap-5">
-              <Link href="#sumate" className="boton">Quiero jugar</Link>
+            <div className="mt-7 flex flex-wrap items-center gap-4 sm:gap-6">
+              <Link href="#sumate" className="boton min-h-12 px-6">Quiero jugar</Link>
               <CuentaRegresiva hasta={INICIO_2027} />
             </div>
           </div>
-          <div className="relative flex items-center justify-center md:justify-end">
-            <Image src="/brand/escudo-estrellas.png" alt="Escudo del CAF" width={260} height={260} priority className="h-auto w-48 sm:w-64" />
-          </div>
+          <figure className="relative order-2 m-0 aspect-[4/3] overflow-hidden bg-surface md:aspect-[1.3]">
+            <Image
+              src="/postales/2026/Liga Interfacultades/WhatsApp_Image_2026-11-08_at_11.21.12_AM.webp"
+              alt="Plantel del CAF en una cancha, junto a su bandera (2026)"
+              width={1600}
+              height={1200}
+              priority
+              sizes="(max-width: 767px) 100vw, 58vw"
+              className="h-full w-full object-cover object-[center_58%]"
+            />
+            <figcaption className="absolute bottom-3 left-3 border-l-2 border-accent bg-bg/90 px-3 py-2 text-xs font-semibold uppercase tracking-[0.16em] text-text sm:bottom-5 sm:left-5">Plantel · 2026</figcaption>
+          </figure>
         </div>
       </section>
 
