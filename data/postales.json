@@ -1,1 +1,172 @@
-[]
+[
+  {
+    "id": "2026/Liga Interfacultades",
+    "anio": 2026,
+    "fecha": null,
+    "rival": null,
+    "golesCAF": null,
+    "golesRival": null,
+    "competencia": null,
+    "fotos": [
+      {
+        "archivo": "/postales/2026/Liga Interfacultades/WhatsApp_Image_2026-11-08_at_11.21.12_AM.webp",
+        "miniatura": "/postales/2026/Liga Interfacultades/WhatsApp_Image_2026-11-08_at_11.21.12_AM-480.webp",
+        "ancho": 1600,
+        "alto": 1200,
+        "alt": "Postal del CAF · 2026"
+      }
+    ]
+  },
+  {
+    "id": "2024/Liga Interfacultades",
+    "anio": 2024,
+    "fecha": null,
+    "rival": null,
+    "golesCAF": null,
+    "golesRival": null,
+    "competencia": null,
+    "fotos": [
+      {
+        "archivo": "/postales/2024/Liga Interfacultades/IMG_3824.webp",
+        "miniatura": "/postales/2024/Liga Interfacultades/IMG_3824-480.webp",
+        "ancho": 1600,
+        "alto": 1066,
+        "alt": "Postal del CAF · 2024"
+      },
+      {
+        "archivo": "/postales/2024/Liga Interfacultades/IMG_3878.webp",
+        "miniatura": "/postales/2024/Liga Interfacultades/IMG_3878-480.webp",
+        "ancho": 1333,
+        "alto": 2000,
+        "alt": "Postal del CAF · 2024"
+      },
+      {
+        "archivo": "/postales/2024/Liga Interfacultades/IMG_4036.webp",
+        "miniatura": "/postales/2024/Liga Interfacultades/IMG_4036-480.webp",
+        "ancho": 1333,
+        "alto": 2000,
+        "alt": "Postal del CAF · 2024"
+      },
+      {
+        "archivo": "/postales/2024/Liga Interfacultades/IMG_4037.webp",
+        "miniatura": "/postales/2024/Liga Interfacultades/IMG_4037-480.webp",
+        "ancho": 1333,
+        "alto": 2000,
+        "alt": "Postal del CAF · 2024"
+      },
+      {
+        "archivo": "/postales/2024/Liga Interfacultades/IMG_4038.webp",
+        "miniatura": "/postales/2024/Liga Interfacultades/IMG_4038-480.webp",
+        "ancho": 1333,
+        "alto": 2000,
+        "alt": "Postal del CAF · 2024"
+      },
+      {
+        "archivo": "/postales/2024/Liga Interfacultades/IMG_4039.webp",
+        "miniatura": "/postales/2024/Liga Interfacultades/IMG_4039-480.webp",
+        "ancho": 1333,
+        "alto": 2000,
+        "alt": "Postal del CAF · 2024"
+      },
+      {
+        "archivo": "/postales/2024/Liga Interfacultades/IMG_4040.webp",
+        "miniatura": "/postales/2024/Liga Interfacultades/IMG_4040-480.webp",
+        "ancho": 1333,
+        "alto": 2000,
+        "alt": "Postal del CAF · 2024"
+      },
+      {
+        "archivo": "/postales/2024/Liga Interfacultades/IMG_4041.webp",
+        "miniatura": "/postales/2024/Liga Interfacultades/IMG_4041-480.webp",
+        "ancho": 1333,
+        "alto": 2000,
+        "alt": "Postal del CAF · 2024"
+      },
+      {
+        "archivo": "/postales/2024/Liga Interfacultades/IMG_4042.webp",
+        "miniatura": "/postales/2024/Liga Interfacultades/IMG_4042-480.webp",
+        "ancho": 1333,
+        "alto": 2000,
+        "alt": "Postal del CAF · 2024"
+      },
+      {
+        "archivo": "/postales/2024/Liga Interfacultades/IMG_4054.webp",
+        "miniatura": "/postales/2024/Liga Interfacultades/IMG_4054-480.webp",
+        "ancho": 1600,
+        "alto": 1066,
+        "alt": "Postal del CAF · 2024"
+      }
+    ]
+  },
+  {
+    "id": "2023/Liga Interfacultades",
+    "anio": 2023,
+    "fecha": null,
+    "rival": null,
+    "golesCAF": null,
+    "golesRival": null,
+    "competencia": null,
+    "fotos": [
+      {
+        "archivo": "/postales/2023/Liga Interfacultades/IMG_3654.webp",
+        "miniatura": "/postales/2023/Liga Interfacultades/IMG_3654-480.webp",
+        "ancho": 1600,
+        "alto": 1066,
+        "alt": "Postal del CAF · 2023"
+      },
+      {
+        "archivo": "/postales/2023/Liga Interfacultades/IMG_3660.webp",
+        "miniatura": "/postales/2023/Liga Interfacultades/IMG_3660-480.webp",
+        "ancho": 1600,
+        "alto": 1066,
+        "alt": "Postal del CAF · 2023"
+      },
+      {
+        "archivo": "/postales/2023/Liga Interfacultades/IMG_3677.webp",
+        "miniatura": "/postales/2023/Liga Interfacultades/IMG_3677-480.webp",
+        "ancho": 1600,
+        "alto": 1066,
+        "alt": "Postal del CAF · 2023"
+      },
+      {
+        "archivo": "/postales/2023/Liga Interfacultades/IMG_3762.webp",
+        "miniatura": "/postales/2023/Liga Interfacultades/IMG_3762-480.webp",
+        "ancho": 1333,
+        "alto": 2000,
+        "alt": "Postal del CAF · 2023"
+      }
+    ]
+  },
+  {
+    "id": "2020/Copa de Plata",
+    "anio": 2020,
+    "fecha": null,
+    "rival": null,
+    "golesCAF": null,
+    "golesRival": null,
+    "competencia": "Copa Plata",
+    "fotos": [
+      {
+        "archivo": "/postales/2020/Copa de Plata/IMG-20201128-WA0089.webp",
+        "miniatura": "/postales/2020/Copa de Plata/IMG-20201128-WA0089-480.webp",
+        "ancho": 1600,
+        "alto": 1200,
+        "alt": "Postal del CAF · 2020"
+      },
+      {
+        "archivo": "/postales/2020/Copa de Plata/IMG-20201128-WA0090.webp",
+        "miniatura": "/postales/2020/Copa de Plata/IMG-20201128-WA0090-480.webp",
+        "ancho": 1600,
+        "alto": 1200,
+        "alt": "Postal del CAF · 2020"
+      },
+      {
+        "archivo": "/postales/2020/Copa de Plata/IMG-20201128-WA0156.webp",
+        "miniatura": "/postales/2020/Copa de Plata/IMG-20201128-WA0156-480.webp",
+        "ancho": 1473,
+        "alto": 900,
+        "alt": "Postal del CAF · 2020"
+      }
+    ]
+  }
+]
