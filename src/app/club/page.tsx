@@ -24,7 +24,6 @@ export default function Club() {
             <p>
               Representamos a la Facultad de Ingeniería en la Liga Interfacultades de la Udelar. Con dos Copas de Plata en la vitrina, año a año buscamos engranajes para formar nuestro plantel.
             </p>
-            <p className="text-dim">El escudo reúne los bastones negros y rosados y el gris del edificio de la Facultad.</p>
           </div>
         </div>
       </Seccion>
@@ -43,7 +42,7 @@ export default function Club() {
       <Seccion titulo="La Facultad">
         <div className="max-w-2xl space-y-4">
           <p>
-            Jugamos por la Facultad de Ingeniería de la Udelar, en el Parque Rodó, frente a la rambla de Montevideo. Su edificio, el mismo que aparece en nuestro escudo, es una de las obras más reconocidas de la arquitectura moderna uruguaya.
+            Jugamos por la Facultad de Ingeniería de la Udelar, en el Parque Rodó, frente a la rambla de Montevideo. Representamos a toda la comunidad FIng: queremos integrar a estudiantes, egresados y a todos los que forman parte de la Facultad.
           </p>
           <p className="text-dim">Av. Julio Herrera y Reissig 565, Montevideo.</p>
           <div className="flex flex-wrap gap-4 text-sm">
