@@ -127,3 +127,31 @@ describe("temporadas históricas cargadas a mano", () => {
     });
   }
 });
+
+describe("historia (todas las temporadas)", async () => {
+  const { TEMPORADAS } = await import("./temporadas");
+  const { records, resumenPorAnio, ganoPenales, partidosHistoricos } = await import("./historia");
+  const ts = Object.values(TEMPORADAS);
+
+  it("suma los partidos de cada año", () => {
+    const porAnio = resumenPorAnio(ts).reduce((s, a) => s + a.partidos.pj, 0);
+    expect(records(ts).total.pj).toBe(porAnio);
+    expect(partidosHistoricos(ts)[0].anio).toBe(2017);
+  });
+
+  it("penales: 5 de 6 definiciones ganadas (2020 ×2, 2024 ×3; 2023 perdida con Derecho)", () => {
+    expect(records(ts).penales).toEqual({ jugadas: 6, ganadas: 5 });
+  });
+
+  it("ganoPenales respeta el lado de Ingeniería", () => {
+    const base = { rival: "X", gf: 1, gc: 1, resultado: "E" as const };
+    const p = { competencia: "copa-oro" as const, instancia: "cuartos" as const, fecha_nro: 2, fecha: null, cancha: null, local: "A", visitante: "B", goles_local: 1, goles_visitante: 1, penales: "4-3" };
+    expect(ganoPenales({ ...base, partido: p, local: true })).toBe(true);
+    expect(ganoPenales({ ...base, partido: p, local: false })).toBe(false);
+    expect(ganoPenales({ ...base, partido: { ...p, penales: null }, local: true })).toBeNull();
+  });
+
+  it("la mejor posición registrada es el 3.º de 2018", () => {
+    expect(records(ts).mejorPosicion?.anio).toBe(2018);
+  });
+});

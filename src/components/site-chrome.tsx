@@ -4,20 +4,22 @@ import Link from "next/link";
 const NAV = [
   { href: "/", label: "Inicio", corto: "Inicio" },
   { href: "/temporada/2026", label: "Temporadas", corto: "Temporadas" },
+  { href: "/historia", label: "Historia", corto: "Historia" },
+  { href: "/plantel", label: "Plantel", corto: "Plantel" },
   { href: "/dirigencia", label: "Dirigencia", corto: "Dirigencia" },
 ];
 
 export function SiteHeader() {
   return (
     <header className="sticky top-0 z-20 border-b border-line bg-bg/90 backdrop-blur">
-      <div className="mx-auto flex max-w-6xl items-center gap-3 px-4 py-3">
+      <div className="mx-auto flex max-w-6xl flex-wrap items-center gap-3 px-4 py-3">
         <Link href="/" className="flex items-center gap-2.5" aria-label="CAF, inicio">
           <Image src="/brand/escudo.png" alt="" width={30} height={35} priority />
           <span className="font-display text-2xl font-black uppercase leading-none tracking-wide">
             CAF <span className="hidden font-semibold text-dim sm:inline">· Ingeniería F11</span>
           </span>
         </Link>
-        <nav className="ml-auto flex gap-1 text-sm">
+        <nav aria-label="Navegación principal" className="flex w-full flex-wrap gap-1 text-sm sm:ml-auto sm:w-auto">
           {NAV.map((n) => (
             <Link key={n.href} href={n.href} className="rounded-md px-2.5 py-1.5 text-dim hover:bg-surface hover:text-text">
               <span className="hidden sm:inline">{n.label}</span>
