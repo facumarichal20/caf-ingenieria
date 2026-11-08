@@ -26,10 +26,10 @@ export function CuentaRegresiva({ hasta }: { hasta: string }) {
     ["seg", p.seg],
   ];
   return (
-    <div className="flex gap-2" aria-live="off" suppressHydrationWarning>
+    <div className="flex w-full max-w-sm gap-1.5 sm:gap-2" aria-live="off" suppressHydrationWarning>
       {celdas.map(([l, v]) => (
-        <div key={l} className="min-w-16 rounded-lg border border-line bg-surface px-3 py-2 text-center">
-          <div className="num text-3xl font-semibold leading-none sm:text-4xl">{ahora === null ? "--" : String(v).padStart(2, "0")}</div>
+        <div key={l} className="min-w-0 flex-1 rounded-lg border border-line bg-surface px-1.5 py-2 text-center sm:min-w-16 sm:px-3">
+          <div className="num text-2xl font-semibold leading-none sm:text-4xl">{ahora === null ? "--" : String(v).padStart(2, "0")}</div>
           <div className="mt-1 text-[11px] uppercase tracking-wider text-dim">{l}</div>
         </div>
       ))}

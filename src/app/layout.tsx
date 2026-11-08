@@ -22,7 +22,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
       <body className={`${display.variable} ${sans.variable} ${mono.variable} min-h-dvh flex flex-col`}>
         <a href="#contenido" className="salto-contenido">Saltar al contenido</a>
         <SiteHeader />
-        <main id="contenido" className="min-w-0 flex-1">{children}</main>
+        <main id="contenido" className="min-w-0 flex-1 pb-20 md:pb-0">{children}</main>
         <SiteFooter />
       </body>
     </html>

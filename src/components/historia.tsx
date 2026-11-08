@@ -16,10 +16,11 @@ const LOGROS = [
   { anio: 2018, titulo: "Semifinal Copa Oro", detalle: "3.º en la fase regular, la mejor registrada; afuera con ISEF", medalla: null },
 ];
 
-export function Palmares() {
+export function Palmares({ soloTitulos = false }: { soloTitulos?: boolean }) {
+  const logros = soloTitulos ? LOGROS.filter((l) => l.medalla === "plata") : LOGROS;
   return (
     <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-      {LOGROS.map((l) => {
+      {logros.map((l) => {
         const className = clsx(
           "rounded-xl border p-4 transition",
           TEMPORADAS[l.anio] && "hover:border-accent/70",
