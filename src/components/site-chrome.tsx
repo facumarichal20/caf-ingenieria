@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ChevronDown, Menu } from "lucide-react";
+import { SocialLinks } from "@/components/social-links";
 
 const NAV_PRINCIPAL = [
   { href: "/", label: "Inicio" },
@@ -58,7 +59,10 @@ export function SiteHeader() {
           </nav>
         </details>
       </div>
-      <div className="mx-auto flex max-w-6xl flex-wrap gap-4 px-4 pb-3 text-xs text-dim"><a href="https://www.instagram.com/ingenieriafutbol_11/">Instagram CAF</a><a href="https://www.facebook.com/ingenieriafutbol11/">Facebook CAF</a><a href="https://www.instagram.com/ligainterfacultadesoficial/">Instagram Liga</a></div>
+      <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 pb-3">
+        <span className="text-xs font-medium uppercase tracking-[0.16em] text-dim">Seguinos</span>
+        <SocialLinks />
+      </div>
       <div className="bastones-finos h-1" aria-hidden="true" />
     </header>
   );
@@ -67,13 +71,13 @@ export function SiteHeader() {
 export function SiteFooter() {
   return (
     <>
-      <footer className="mt-20 border-t border-line">
-        <div className="mx-auto flex max-w-6xl flex-wrap items-center gap-x-6 gap-y-2 px-4 py-6 text-sm text-dim">
+      <footer className="mt-20 border-t border-line pb-16 md:pb-0">
+        <div className="mx-auto flex max-w-6xl flex-col gap-5 px-4 py-6 sm:flex-row sm:items-center sm:justify-between">
+          <div className="flex flex-col gap-1 text-sm text-dim">
           <span>Ingeniería Fútbol 11 · Liga Interfacultades UdelaR</span>
-          <a className="hover:text-text" href="https://www.instagram.com/ingenieriafutbol_11/" target="_blank" rel="noreferrer">Instagram @ingenieriafutbol_11</a>
-          <a href="https://www.facebook.com/ingenieriafutbol11/">Facebook CAF</a>
-          <a href="https://www.instagram.com/ligainterfacultadesoficial/">Instagram Liga</a>
           <span>Representando a <a className="hover:text-text" href="https://www.instagram.com/fingudelar/" target="_blank" rel="noreferrer">@fingudelar</a> en la <a className="hover:text-text" href="https://www.instagram.com/ligainterfacultadesoficial/" target="_blank" rel="noreferrer">@ligainterfacultadesoficial</a> desde 2010.</span>
+          </div>
+          <SocialLinks />
         </div>
       </footer>
       <Link href="/#sumate" className="fixed inset-x-3 bottom-3 z-40 flex min-h-12 items-center justify-center border border-tinta bg-accent px-4 font-semibold text-tinta shadow-lg md:hidden">Sumate</Link>
