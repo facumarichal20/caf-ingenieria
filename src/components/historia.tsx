@@ -10,10 +10,11 @@ const LOGROS = [
   { anio: 2013, titulo: "Copa de Plata", detalle: null, medalla: "plata" },
   { anio: 2020, titulo: "Copa de Plata", detalle: "Dos series por penales y final 2-0 a UDE en el Obdulio Varela", medalla: "plata" },
   { anio: 2024, titulo: "Subcampeón del Mundialito", detalle: "3 series ganadas por penales; final 0-1 con ISEF", medalla: "plata" },
+  { anio: 2018, titulo: "Semifinal Copa Oro", detalle: "3.º en la fase regular, la mejor registrada; afuera con ISEF", medalla: null },
+  { anio: 2021, titulo: "Semifinal Copa Oro", detalle: "2-0 a Química en cuartos", medalla: null },
+  { anio: 2022, titulo: "Semifinal Copa Oro", detalle: "Eliminó a EMA en cuartos; afuera con Medicina", medalla: null },
   { anio: 2024, titulo: "Semifinal Copa Oro", detalle: "Afuera con ISEF por un gol en el global", medalla: null },
   { anio: 2025, titulo: "Semifinal Copa Oro", detalle: "Eliminó a ISEF y le ganó la ida 3-1 a Contadores", medalla: null },
-  { anio: 2021, titulo: "Semifinal Copa Oro", detalle: "2-0 a Química en cuartos", medalla: null },
-  { anio: 2018, titulo: "Semifinal Copa Oro", detalle: "3.º en la fase regular, la mejor registrada; afuera con ISEF", medalla: null },
 ];
 
 export function Palmares({ soloTitulos = false }: { soloTitulos?: boolean }) {
